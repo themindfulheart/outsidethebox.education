@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum & Resource Reviews — Outside the Box Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--cream:#FAF3EC;
+--cream-solid:#FAF3EC;
+--paper:#FFFFFF;
+--ink:#2E2A27;
+--ink-soft:#6B645D;
+--clay:#9C5F55;
+--clay-dark:#7C4B43;
+--line:rgba(46,42,39,0.12);
+--footer-bg:#2E2A27;
+--footer-text:#C9BFB6;
+--footer-line:rgba(255,255,255,0.12);
+--radius:14px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+margin:0;
+background:var(--paper);
+color:var(--ink);
+font-family:'Inter',system-ui,sans-serif;
+line-height:1.6;
+}
+@‌media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
+h1,h2,h3{font-family:'Familjen Grotesk',sans-serif;font-weight:600;margin:0;}
+a{color:inherit;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+/* ================= HEADER ================= */
+header{
+position:sticky;top:0;z-index:50;
+background:rgba(250,243,236,0.92);
+backdrop-filter:blur(6px);
+border-bottom:1px solid var(--line);
+}
+.header-inner{
+max-width:1180px;margin:0 auto;padding:16px 32px;
+display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand-mark{
+width:38px;height:38px;border-radius:10px;
+background:var(--clay);
+display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.brand-mark svg{width:20px;height:20px;}
+.brand-name{font-size:17px;font-weight:600;color:var(--ink);white-space:nowrap;}
+nav.main-nav{display:flex;align-items:center;gap:30px;}
+nav.main-nav a{
+font-size:14.5px;font-weight:500;color:var(--ink);text-decoration:none;
+padding-bottom:2px;
+}
+nav.main-nav a.current{
+color:var(--clay-dark);
+border-bottom:2px solid var(--clay);
+}
+nav.main-nav a:hover{color:var(--clay-dark);}
+.btn-pill{
+display:inline-flex;align-items:center;justify-content:center;
+background:var(--clay);color:#fff;
+font-size:14.5px;font-weight:600;
+padding:10px 22px;border-radius:30px;
+text-decoration:none;white-space:nowrap;
+transition:background .15s ease;
+}
+.btn-pill:hover{background:var(--clay-dark);}
+.nav-toggle{display:none;}
+@‌media (max-width:900px){
+nav.main-nav{display:none;}
+.nav-toggle{display:block;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;}
+}
+/* ================= HERO ================= */
+.hero{background:var(--cream);}
+.hero-media{width:100%;display:block;}
+.hero-media img{width:100%;height:auto;display:block;}
+.sr-only{
+position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+.hero-sub{
+max-width:640px;margin:0 auto;text-align:center;
+padding:28px 32px 48px;
+}
+.hero-eyebrow{
+font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+color:var(--clay-dark);margin-bottom:12px;
+}
+.hero-sub p{
+margin:0;color:var(--ink-soft);font-size:17px;
+}
+/* ================= METHODOLOGY ================= */
+.methodology{text-align:center;padding:8px 32px 8px;}
+.methodology p{
+font-family:'Familjen Grotesk',sans-serif;font-weight:500;font-style:italic;
+font-size:19px;color:var(--ink);max-width:56ch;margin:0 auto;
+}
+/* ================= CARDS ================= */
+.cards{
+display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+padding:48px 32px 96px;
+}
+@‌media (max-width:860px){ .cards{grid-template-columns:1fr;padding:36px 24px 64px;} }
+.card{
+background:var(--paper);
+border:1px solid var(--line);
+border-radius:var(--radius);
+padding:32px 26px 28px;
+display:flex;flex-direction:column;gap:14px;
+transition:transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 32px -22px rgba(46,42,39,0.25);}
+.card-icon{
+width:46px;height:46px;border-radius:12px;
+background:rgba(156,95,85,0.12);
+display:flex;align-items:center;justify-content:center;
+color:var(--clay-dark);
+}
+.card-icon svg{width:24px;height:24px;}
+.card-tag{
+font-size:11.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+color:var(--ink-soft);
+}
+.card h2{font-size:22px;color:var(--ink);}
+.card p{margin:0;color:var(--ink-soft);font-size:15.5px;flex-grow:1;}
+.card-link{
+display:inline-flex;align-items:center;gap:8px;margin-top:4px;
+font-weight:600;font-size:14.5px;color:var(--clay-dark);
+text-decoration:none;border-bottom:1px solid var(--clay);padding-bottom:2px;
+width:fit-content;
+}
+.card-link svg{width:14px;height:14px;transition:transform .15s ease;}
+.card-link:hover svg{transform:translateX(3px);}
+/* ================= FOOTER ================= */
+footer{background:var(--footer-bg);color:var(--footer-text);padding:64px 32px 0;}
+.footer-inner{
+max-width:1180px;margin:0 auto;
+display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;
+padding-bottom:48px;
+}
+@‌media (max-width:760px){ .footer-inner{grid-template-columns:1fr 1fr;} .footer-brand-col{grid-column:1 / -1;} }
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.footer-brand .brand-mark{background:#fff;}
+.footer-brand .brand-mark svg{color:var(--clay);}
+.footer-brand-name{font-size:17px;font-weight:600;color:#fff;}
+.footer-desc{font-size:14px;color:var(--footer-text);max-width:34ch;margin:0 0 20px;}
+.social-row{display:flex;gap:10px;}
+.social-row a{
+width:36px;height:36px;border-radius:50%;
+border:1px solid var(--footer-line);
+display:flex;align-items:center;justify-content:center;
+text-decoration:none;color:var(--footer-text);
+}
+.social-row a svg{width:16px;height:16px;}
+.social-row a:hover{border-color:var(--clay);color:#fff;}
+.footer-col h4{
+font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;
+letter-spacing:0.08em;text-transform:uppercase;color:#fff;margin-bottom:16px;
+}
+.footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.footer-col a{font-size:14.5px;color:var(--footer-text);text-decoration:none;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{
+border-top:1px solid var(--footer-line);
+padding:22px 0;
+max-width:1180px;margin:0 auto;
+display:flex;align-items:center;justify-content:space-between;gap:16px;
+font-size:13px;color:var(--footer-text);
+flex-wrap:wrap;
+}
+.footer-bottom .legal-links{display:flex;gap:20px;}
+.footer-bottom a{text-decoration:none;color:var(--footer-text);}
+.footer-bottom a:hover{color:#fff;}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a class="brand" href="https://outsidethebox.education/">
+<span class="brand-mark" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 5.5c2-1 5-1 8 0v13c-3-1-6-1-8 0v-13z"/><path d="M20 5.5c-2-1-5-1-8 0v13c3-1 6-1 8 0v-13z"/></svg>
+</span>
+<span class="brand-name">Outside the Box Education</span>
+</a>
+<nav class="main-nav" aria-label="Primary">
+<a href="https://outsidethebox.education/#pillars">What’s Inside</a>
+<a href="https://outsidethebox.education/#episodes">Latest</a>
+<a href="https://outsidethebox.education/#voices">Voices</a>
+<a href="https://outsidethebox.education/#get-involved">Get Involved</a>
+</nav>
+<a class="btn-pill" href="https://outsidethebox.education/#subscribe">Join the list</a>
+</div>
+</header>
+<section class="hero">
+<h1 class="sr-only">Curriculum & Resource Reviews</h1>
+<div class="hero-media">
+<img src="hero-curriculum-reviews.jpg" alt="Curriculum and Resource Reviews — a stack of Science, History, Language Arts, and Math books surrounded by gold stars">
+</div>
+<div class="hero-sub">
+<div class="hero-eyebrow">Reviewed by real homeschool parents</div>
+<p>Honest reviews, side-by-side comparisons, and trusted recommendations to help you find curriculum and educational resources that fit your family.</p>
+</div>
+</section>
+<div class="methodology">
+<p>“We buy it, use it with our own kids, and tell you the truth — the good, the mediocre, and the ‘return this immediately.’”</p>
+</div>
+<div class="wrap">
+<div class="cards">
+
+
+<article class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8L12 2.5z"/></svg>
+  </div>
+  <div class="card-tag">Start here</div>
+  <h2>Recommended Products</h2>
+  <p>The curriculum and tools we&rsquo;d hand a friend without hesitation &mdash; vetted, used in real homeschools, and worth the investment.</p>
+  <a class="card-link" href="/recommended-products">
+    See our top picks
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</article>
+<article class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3v18M16 3v18M4 8h4M16 8h4M4 16h4M16 16h4"/></svg>
+  </div>
+  <div class="card-tag">Torn between two</div>
+  <h2>Side-by-Side Comparisons</h2>
+  <p>Weighing two math programs, or three language arts options? We line them up feature by feature so you can see the real differences.</p>
+  <a class="card-link" href="/comparisons">
+    Compare curricula
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</article>
+<article class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/></svg>
+  </div>
+  <div class="card-tag">Full library</div>
+  <h2>Curriculum &amp; Product Reviews</h2>
+  <p>Our complete, growing archive of in-depth reviews &mdash; what worked, what didn&rsquo;t, and who each resource is really built for.</p>
+  <a class="card-link" href="/reviews">
+    Browse all reviews
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</article>
+</div>
+</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand-col">
+<div class="footer-brand">
+<span class="brand-mark" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5c2-1 5-1 8 0v13c-3-1-6-1-8 0v-13z"/><path d="M20 5.5c-2-1-5-1-8 0v13c3-1 6-1 8 0v-13z"/></svg>
+</span>
+<span class="footer-brand-name">Outside the Box Education</span>
+</div>
+<p class="footer-desc">A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
+<div class="social-row">
+<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+<a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor" stroke="none"/></svg></a>
+<a href="#" aria-label="Apple Podcasts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></a>
+</div>
+</div>
+
+
+<div class="footer-col">
+  <h4>Explore</h4>
+  <ul>
+    <li><a href="<https://outsidethebox.education/#pillars>">What&rsquo;s Inside</a></li>
+    <li><a href="<https://outsidethebox.education/#episodes>">Latest resources</a></li>
+    <li><a href="<https://outsidethebox.education/#voices>">Reader stories</a></li>
+  </ul>
+</div>
+<div class="footer-col">
+  <h4>Company</h4>
+  <ul>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Press</a></li>
+  </ul>
+</div>
+<div class="footer-col">
+  <h4>Reviews</h4>
+  <ul>
+    <li><a href="/recommended-products">Recommended Products</a></li>
+    <li><a href="/comparisons">Comparisons</a></li>
+    <li><a href="/reviews">All Reviews</a></li>
+  </ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2025 Outside the Box Education. All rights reserved.</span>
+<span class="legal-links">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</span>
+</div>
+</footer>
+</body>
+</html>
