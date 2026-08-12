@@ -9,25 +9,25 @@
 <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com "‌")" crossorigin>
 <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Familjen+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Familjen+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap "‌")" rel="stylesheet">
 <style>
-  /\* ---------- Site-wide tokens & base (matched to outsidethebox.education) ---------- \*/
+  /* ---------- Site-wide tokens & base (matched to outsidethebox.education) ---------- */
   :root {
-    \--cream: #FAF3EC;
-    \--cream-deep: #F3E9DE;
-    \--charcoal: #2E2A27;
-    \--charcoal-soft: #5C5650;
-    \--rose: #C98C82;
-    \--rose-deep: #9C5F55;
-    \--blush: #F0DFD8;
-    \--blush-line: #E3C9BF;
-    \--radius-lg: 20px;
-    \--radius-md: 12px;
+    --cream: #FAF3EC;
+    --cream-deep: #F3E9DE;
+    --charcoal: #2E2A27;
+    --charcoal-soft: #5C5650;
+    --rose: #C98C82;
+    --rose-deep: #9C5F55;
+    --blush: #F0DFD8;
+    --blush-line: #E3C9BF;
+    --radius-lg: 20px;
+    --radius-md: 12px;
   }
 
-- { box-sizing: border-box; }
+  *{ box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: var(--cream); color: var(--charcoal); font-family: Inter, sans-serif; line-height: 1.65; }
-  \@media (prefers-reduced-motion: reduce) {
-  - { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
+  @media (prefers-reduced-motion: reduce) {
+  *{ animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
     }
     a { color: inherit; }
     img { max-width: 100%; display: block; }
@@ -36,7 +36,7 @@
     h1, h2, h3 { font-family: "Familjen Grotesk", sans-serif; font-weight: 600; color: var(--charcoal); margin: 0; letter-spacing: -0.01em; }
     p { margin: 0 0 1rem; }
 
-  /\* ---------- Header / nav (identical to home page) ---------- \*/
+  /* ---------- Header / nav (identical to home page) ---------- */
   header:has(nav) { position: sticky; top: 0; z-index: 50; background: rgba(250, 243, 236, 0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--blush-line); }
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--charcoal); padding: 4px 0; }
@@ -48,12 +48,12 @@
   .nav-cta { font-size: 14px; font-weight: 600; background: var(--rose-deep); color: #fff; padding: 10px 20px; border-radius: 30px; text-decoration: none; white-space: nowrap; }
   .nav-cta:hover { background: rgb(132, 70, 61); }
   .menu-btn { display: none; background: none; border: 1.5px solid var(--charcoal); border-radius: 8px; padding: 8px 10px; font-size: 16px; color: var(--charcoal); cursor: pointer; }
-  \@media (max-width: 640px) {
+  @media (max-width: 640px) {
     .nav-links { display: none; }
     .menu-btn { display: inline-block; }
   }
 
-  /\* ---------- Hero ---------- \*/
+  /* ---------- Hero ---------- */
   .hero { padding: 56px 0 0; }
   .hero-content { text-align: center; max-width: 700px; margin: 0 auto 36px; }
   .hero-content .eyebrow { display: block; margin-bottom: 14px; }
@@ -69,26 +69,26 @@
   .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; max-height: 480px; }
   .hero-photo-top { min-height: 0; max-width: 480px; margin: 0 auto 28px; border-radius: 20px; }
   .hero-photo-top img { max-height: none; }
-  \@media (max-width: 900px) { .hero-content h1 { font-size: 34px; } }
-  \@media (max-width: 640px) { .hero-content h1 { font-size: 28px; } .hero-photo-top { max-width: 100%; } }
+  @media (max-width: 900px) { .hero-content h1 { font-size: 34px; } }
+  @media (max-width: 640px) { .hero-content h1 { font-size: 28px; } .hero-photo-top { max-width: 100%; } }
 
-  /\* ---------- Section shells ---------- \*/
+  /* ---------- Section shells ---------- */
   section { padding: 64px 0; }
   .section-head { text-align: center; max-width: 640px; margin: 0 auto 40px; }
   .section-head .eyebrow { display: block; margin-bottom: 12px; }
   .section-head h2 { font-size: 32px; margin-bottom: 12px; }
   .section-head .lede { color: var(--charcoal-soft); font-size: 16.5px; }
 
-  /\* ---------- "How families use this" pillars ---------- \*/
+  /* ---------- "How families use this" pillars ---------- */
   .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .pillar-card { background: #fff; border: 1px solid var(--blush-line); border-radius: var(--radius-md); padding: 26px 22px; }
   .pillar-card .glyph { font-size: 26px; margin-bottom: 14px; }
   .pillar-card h3 { font-size: 17px; margin-bottom: 8px; }
   .pillar-card p { font-size: 14.5px; color: var(--charcoal-soft); margin-bottom: 0; }
-  \@media (max-width: 900px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
-  \@media (max-width: 640px) { .pillars { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .pillars { grid-template-columns: 1fr; } }
 
-  /\* ---------- State directory (signature element) ---------- \*/
+  /* ---------- State directory (signature element) ---------- */
   .directory { background: var(--cream-deep); border-radius: var(--radius-lg); padding: 44px 36px 48px; }
   .directory-tools { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-bottom: 28px; }
   .directory-count { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--charcoal-soft); }
@@ -125,11 +125,11 @@
   .no-results { display: none; text-align: center; color: var(--charcoal-soft); padding: 30px 0; font-size: 14.5px; }
   .no-results.show { display: block; }
 
-  \@media (max-width: 1024px) { .state-grid { grid-template-columns: repeat(4, 1fr); } }
-  \@media (max-width: 780px) { .state-grid { grid-template-columns: repeat(3, 1fr); } .directory { padding: 32px 20px 36px; } }
-  \@media (max-width: 520px) { .state-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 1024px) { .state-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 780px) { .state-grid { grid-template-columns: repeat(3, 1fr); } .directory { padding: 32px 20px 36px; } }
+  @media (max-width: 520px) { .state-grid { grid-template-columns: repeat(2, 1fr); } }
 
-  /\* ---------- Footer (identical to home page) ---------- \*/
+  /* ---------- Footer (identical to home page) ---------- */
   footer { background: var(--charcoal); color: rgb(201, 191, 182); padding: 52px 0 34px; margin-top: 20px; }
   .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
   .brand-foot { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
@@ -142,8 +142,8 @@
   footer a:hover { text-decoration: underline; }
   .foot-bottom { border-top: 1px solid rgb(69, 63, 58); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12.5px; color: rgb(142, 133, 125); }
   .foot-disclosure { font-size: 12.5px; color: rgb(142, 133, 125); margin-top: 16px; }
-  \@media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
-  \@media (max-width: 640px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
