@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Savings & Funding — Outside the Box Education</title>
+<meta name="description" content="Discover Education Savings Accounts, state-funded learning programs, scholarships, free resources, and other ways to make personalized education more affordable — state by state.">
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com "‌")">
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com "‌")" crossorigin>
+<link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Familjen+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Familjen+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap "‌")" rel="stylesheet">
+<style>
+  /\* ---------- Site-wide tokens & base (matched to outsidethebox.education) ---------- \*/
+  :root {
+    \--cream: #FAF3EC;
+    \--cream-deep: #F3E9DE;
+    \--charcoal: #2E2A27;
+    \--charcoal-soft: #5C5650;
+    \--rose: #C98C82;
+    \--rose-deep: #9C5F55;
+    \--blush: #F0DFD8;
+    \--blush-line: #E3C9BF;
+    \--radius-lg: 20px;
+    \--radius-md: 12px;
+  }
+
+- { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--cream); color: var(--charcoal); font-family: Inter, sans-serif; line-height: 1.65; }
+  \@media (prefers-reduced-motion: reduce) {
+  - { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rose-deep); }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    h1, h2, h3 { font-family: "Familjen Grotesk", sans-serif; font-weight: 600; color: var(--charcoal); margin: 0; letter-spacing: -0.01em; }
+    p { margin: 0 0 1rem; }
+
+  /\* ---------- Header / nav (identical to home page) ---------- \*/
+  header:has(nav) { position: sticky; top: 0; z-index: 50; background: rgba(250, 243, 236, 0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--blush-line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--charcoal); padding: 4px 0; }
+  .brand .brand-mark { font-family: "Familjen Grotesk", sans-serif; font-weight: 700; font-size: 19px; line-height: 1.1; }
+  .brand .brand-mark span { color: var(--rose-deep); }
+  .nav-links { display: flex; gap: 28px; font-size: 14.5px; font-weight: 500; }
+  .nav-links a { text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 3px; }
+  .nav-links a:hover { border-color: var(--rose); }
+  .nav-cta { font-size: 14px; font-weight: 600; background: var(--rose-deep); color: #fff; padding: 10px 20px; border-radius: 30px; text-decoration: none; white-space: nowrap; }
+  .nav-cta:hover { background: rgb(132, 70, 61); }
+  .menu-btn { display: none; background: none; border: 1.5px solid var(--charcoal); border-radius: 8px; padding: 8px 10px; font-size: 16px; color: var(--charcoal); cursor: pointer; }
+  \@media (max-width: 640px) {
+    .nav-links { display: none; }
+    .menu-btn { display: inline-block; }
+  }
+
+  /\* ---------- Hero ---------- \*/
+  .hero { padding: 56px 0 0; }
+  .hero-content { text-align: center; max-width: 700px; margin: 0 auto 36px; }
+  .hero-content .eyebrow { display: block; margin-bottom: 14px; }
+  .hero-content h1 { font-size: 46px; line-height: 1.14; margin: 0 0 18px; }
+  .hero-content .lede { font-size: 17.5px; color: var(--charcoal-soft); max-width: 58ch; margin: 0 auto; }
+  .hero-ctas { display: flex; gap: 14px; margin-top: 26px; flex-wrap: wrap; justify-content: center; }
+  .btn { font-size: 14.5px; font-weight: 600; padding: 13px 24px; border-radius: 30px; text-decoration: none; display: inline-block; border: 1.5px solid transparent; cursor: pointer; }
+  .btn-solid { background: var(--rose-deep); color: #fff; }
+  .btn-solid:hover { background: rgb(132, 70, 61); }
+  .btn-outline { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
+  .btn-outline:hover { background: rgba(46, 42, 39, 0.06); }
+  .hero-photo { position: relative; border-radius: 28px; overflow: hidden; min-height: 420px; margin-bottom: 8px; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; max-height: 480px; }
+  .hero-photo-top { min-height: 0; max-width: 480px; margin: 0 auto 28px; border-radius: 20px; }
+  .hero-photo-top img { max-height: none; }
+  \@media (max-width: 900px) { .hero-content h1 { font-size: 34px; } }
+  \@media (max-width: 640px) { .hero-content h1 { font-size: 28px; } .hero-photo-top { max-width: 100%; } }
+
+  /\* ---------- Section shells ---------- \*/
+  section { padding: 64px 0; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 40px; }
+  .section-head .eyebrow { display: block; margin-bottom: 12px; }
+  .section-head h2 { font-size: 32px; margin-bottom: 12px; }
+  .section-head .lede { color: var(--charcoal-soft); font-size: 16.5px; }
+
+  /\* ---------- "How families use this" pillars ---------- \*/
+  .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .pillar-card { background: #fff; border: 1px solid var(--blush-line); border-radius: var(--radius-md); padding: 26px 22px; }
+  .pillar-card .glyph { font-size: 26px; margin-bottom: 14px; }
+  .pillar-card h3 { font-size: 17px; margin-bottom: 8px; }
+  .pillar-card p { font-size: 14.5px; color: var(--charcoal-soft); margin-bottom: 0; }
+  \@media (max-width: 900px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
+  \@media (max-width: 640px) { .pillars { grid-template-columns: 1fr; } }
+
+  /\* ---------- State directory (signature element) ---------- \*/
+  .directory { background: var(--cream-deep); border-radius: var(--radius-lg); padding: 44px 36px 48px; }
+  .directory-tools { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-bottom: 28px; }
+  .directory-count { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--charcoal-soft); }
+  .directory-search { position: relative; flex: 1; max-width: 320px; min-width: 220px; }
+  .directory-search input {
+    width: 100%; font-family: Inter, sans-serif; font-size: 14.5px; padding: 12px 16px 12px 38px;
+    border: 1.5px solid var(--blush-line); border-radius: 30px; background: #fff; color: var(--charcoal);
+  }
+  .directory-search input:focus { outline: 2px solid var(--rose-deep); outline-offset: 1px; }
+  .directory-search::before {
+    content: "⌕"; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+    color: var(--charcoal-soft); font-size: 16px; pointer-events: none;
+  }
+  .placeholder-note {
+    font-size: 12.5px; color: var(--charcoal-soft); background: var(--blush); border: 1px solid var(--blush-line);
+    border-radius: var(--radius-md); padding: 10px 16px; margin-bottom: 26px;
+  }
+  .placeholder-note strong { color: var(--charcoal); }
+
+  .state-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .state-btn {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+    background: #fff; border: 1.5px solid var(--blush-line); border-radius: var(--radius-md);
+    padding: 14px 16px; text-decoration: none; color: var(--charcoal); text-align: left;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .state-btn:hover, .state-btn:focus-visible {
+    border-color: var(--rose-deep); transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(46, 42, 39, 0.08); outline: none;
+  }
+  .state-btn .state-name { font-family: "Familjen Grotesk", sans-serif; font-weight: 600; font-size: 15.5px; }
+  .state-btn .state-count { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.02em; color: var(--rose-deep); }
+  .state-btn[hidden] { display: none; }
+  .no-results { display: none; text-align: center; color: var(--charcoal-soft); padding: 30px 0; font-size: 14.5px; }
+  .no-results.show { display: block; }
+
+  \@media (max-width: 1024px) { .state-grid { grid-template-columns: repeat(4, 1fr); } }
+  \@media (max-width: 780px) { .state-grid { grid-template-columns: repeat(3, 1fr); } .directory { padding: 32px 20px 36px; } }
+  \@media (max-width: 520px) { .state-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /\* ---------- Footer (identical to home page) ---------- \*/
+  footer { background: var(--charcoal); color: rgb(201, 191, 182); padding: 52px 0 34px; margin-top: 20px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
+  .brand-foot { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .brand-foot .brand-mark { font-family: "Familjen Grotesk", sans-serif; font-weight: 700; font-size: 18px; color: #fff; }
+  .brand-foot .brand-mark span { color: var(--rose); }
+  footer h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(142, 133, 125); margin: 0 0 14px; font-weight: 600; }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { margin-bottom: 9px; font-size: 14.5px; }
+  footer a, .no-underline { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .foot-bottom { border-top: 1px solid rgb(69, 63, 58); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12.5px; color: rgb(142, 133, 125); }
+  .foot-disclosure { font-size: 12.5px; color: rgb(142, 133, 125); margin-top: 16px; }
+  \@media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  \@media (max-width: 640px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="brand">
+      <span class="brand-mark">Outside the Box <span>Education</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#pillars">What's Inside</a>
+      <a href="/#episodes">Latest</a>
+      <a href="/#voices">Voices</a>
+      <a href="/#get-involved">Get Involved</a>
+      <a href="/#subscribe">Subscribe</a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <a href="/#subscribe" class="nav-cta">Join the list</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="hero-photo hero-photo-top">
+          <img src="hero-education-savings.jpg" alt="A graduation-cap-wearing piggy bank sits atop a stack of books beside a jar labeled 'Education Fund', next to the words Education Savings & Funding.">
+        </div>
+        <h1>Education Savings & Funding</h1>
+        <p class="lede">Discover Education Savings Accounts, state-funded learning programs, scholarships, free resources, and other ways to make personalized education more affordable.</p>
+        <div class="hero-ctas">
+          <a href="#state-directory" class="btn btn-solid">Find your state's programs</a>
+          <a href="#program-types" class="btn btn-outline">See how funding works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of funding -->
+  <section id="program-types">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Know your options</span>
+        <h2>A few different ways families get help paying for it.</h2>
+        <p class="lede">Funding for personalized education generally falls into a handful of buckets. Most states offer at least one — many now offer several.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar-card">
+          <div class="glyph">🐖</div>
+          <h3>Education Savings Accounts</h3>
+          <p>State-deposited funds parents can direct toward curriculum, tutoring, therapies, testing, and more.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="glyph">🎟️</div>
+          <h3>Vouchers & tuition grants</h3>
+          <p>State funding that follows a student to a private, charter, or alternative school of the family's choice.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="glyph">🎓</div>
+          <h3>Scholarships & tax credits</h3>
+          <p>Privately funded scholarships, often supported by state tax-credit programs, covering tuition or enrichment.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="glyph">📚</div>
+          <h3>Free resources & microgrants</h3>
+          <p>Library co-op passes, umbrella school stipends, and small grants for curriculum, field trips, and extracurriculars.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- State directory -->
+  <section id="state-directory">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">State by state</span>
+        <h2>Find programs available where you live.</h2>
+        <p class="lede">Select your state to see the Education Savings Accounts, scholarships, and funding programs your family may qualify for.</p>
+      </div>
+
+```
+  <div class="directory">
+    <div class="placeholder-note">
+      <strong>Note for the site team:</strong> the program counts below (e.g. "3 programs") are placeholder numbers so the layout can be reviewed. Swap in verified figures — and real per-state links — before this goes live.
+    </div>
+    <div class="directory-tools">
+      <span class="directory-count" id="stateCount">50 states</span>
+      <div class="directory-search">
+        <input type="text" id="stateSearch" placeholder="Search your state…" aria-label="Search your state">
+      </div>
+    </div>
+
+    <div class="state-grid" id="stateGrid"></div>
+    <p class="no-results" id="noResults">No states match that search.</p>
+  </div>
+</div>
+```
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-foot">
+          <span class="brand-mark">Outside the Box <span>Education</span></span>
+        </div>
+        <p>A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/#pillars">What's Inside</a></li>
+          <li><a href="/#episodes">Latest resources</a></li>
+          <li><a href="/#voices">Reader stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Apple Podcasts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Outside the Box Education. All rights reserved.</span>
+      <span>Made for families, by families.</span>
+    </div>
+    <div class="foot-disclosure">
+      Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Placeholder state data. Replace "programs" counts and "href" with real, verified data. ----
+  const states = [
+    ["Alabama","AL",4],["Alaska","AK",2],["Arizona","AZ",7],["Arkansas","AR",5],["California","CA",1],
+    ["Colorado","CO",2],["Connecticut","CT",1],["Delaware","DE",1],["Florida","FL",8],["Georgia","GA",4],
+    ["Hawaii","HI",1],["Idaho","ID",3],["Illinois","IL",2],["Indiana","IN",6],["Iowa","IA",5],
+    ["Kansas","KS",2],["Kentucky","KY",2],["Louisiana","LA",4],["Maine","ME",1],["Maryland","MD",1],
+    ["Massachusetts","MA",1],["Michigan","MI",1],["Minnesota","MN",1],["Mississippi","MS",3],["Missouri","MO",4],
+    ["Montana","MT",3],["Nebraska","NE",2],["Nevada","NV",2],["New Hampshire","NH",4],["New Jersey","NJ",1],
+    ["New Mexico","NM",1],["New York","NY",1],["North Carolina","NC",5],["North Dakota","ND",1],["Ohio","OH",6],
+    ["Oklahoma","OK",5],["Oregon","OR",1],["Pennsylvania","PA",2],["Rhode Island","RI",1],["South Carolina","SC",4],
+    ["South Dakota","SD",2],["Tennessee","TN",4],["Texas","TX",3],["Utah","UT",5],["Vermont","VT",1],
+    ["Virginia","VA",2],["Washington","WA",1],["West Virginia","WV",5],["Wisconsin","WI",3],["Wyoming","WY",3]
+  ];
+
+  const grid = document.getElementById('stateGrid');
+  const countEl = document.getElementById('stateCount');
+  const searchInput = document.getElementById('stateSearch');
+  const noResults = document.getElementById('noResults');
+
+  countEl.textContent = states.length + " states";
+
+  states.forEach(([name, abbr, count]) => {
+    const a = document.createElement('a');
+    a.className = 'state-btn';
+    a.href = '/states/' + name.toLowerCase().replace(/\s+/g, '-') + '.html';
+    a.dataset.name = name.toLowerCase();
+    a.innerHTML =
+      '<span class="state-name">' + name + '</span>' +
+      '<span class="state-count">' + count + ' program' + (count === 1 ? '' : 's') + '</span>';
+    grid.appendChild(a);
+  });
+
+  const buttons = Array.from(grid.querySelectorAll('.state-btn'));
+
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    buttons.forEach(btn => {
+      const match = btn.dataset.name.includes(q);
+      btn.hidden = !match;
+      if (match) visibleCount++;
+    });
+    noResults.classList.toggle('show', visibleCount === 0);
+  });
+</script>
+
+</body>
+</html>
