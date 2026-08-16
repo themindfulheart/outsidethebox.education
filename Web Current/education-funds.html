@@ -161,18 +161,14 @@ nav.main-nav{display:none;}
   @media (max-width: 520px) { .state-grid { grid-template-columns: repeat(2, 1fr); } }
 
   /* ---------- Footer (identical to home page) ---------- */
-  footer { background: var(--charcoal); color: rgb(201, 191, 182); padding: 52px 0 34px; margin-top: 20px; }
-  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
-  .brand-foot { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-  .brand-foot .brand-mark { font-family: "Familjen Grotesk", sans-serif; font-weight: 700; font-size: 18px; color: #fff; }
-  .brand-foot .brand-mark span { color: var(--rose); }
-  footer h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(142, 133, 125); margin: 0 0 14px; font-weight: 600; }
-  footer ul { list-style: none; margin: 0; padding: 0; }
-  footer li { margin-bottom: 9px; font-size: 14.5px; }
-  footer a, .no-underline { text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-  .foot-bottom { border-top: 1px solid rgb(69, 63, 58); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12.5px; color: rgb(142, 133, 125); }
-  .foot-disclosure { font-size: 12.5px; color: rgb(142, 133, 125); margin-top: 16px; }
+ footer{background:var(--ink); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
+footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
+footer ul{list-style:none; margin:0; padding:0;}
+footer li{margin-bottom:9px; font-size:14.5px;}
+footer a, .no-underline{text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+.foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
   @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 640px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
 </style>
@@ -281,17 +277,16 @@ nav.main-nav{display:none;}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="brand-foot">
-          <span class="brand-mark">Outside the Box <span>Education</span></span>
-        </div>
-        <p>A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
+        <div class="brand-foot" style="background:var(--cream); display:inline-flex; padding:10px 14px 8px; border-radius:16px;">
+        <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">        </div>
+        <p style="margin-top:14px; font-size:14px; color:#8E857D; max-width:34ch;">A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
       </div>
       <div>
         <h4>Explore</h4>
         <ul>
-          <li><a href="/#pillars">What's Inside</a></li>
-          <li><a href="/#episodes">Latest resources</a></li>
-          <li><a href="/#voices">Reader stories</a></li>
+          <li><a href="#pillars">What's Inside</a></li>
+          <li><a href="#episodes">Latest resources</a></li>
+          <li><a href="#voices">Reader stories</a></li>
         </ul>
       </div>
       <div>
@@ -315,7 +310,7 @@ nav.main-nav{display:none;}
       <span>© 2026 Outside the Box Education. All rights reserved.</span>
       <span>Made for families, by families.</span>
     </div>
-    <div class="foot-disclosure">
+    <div style="text-align:center; font-size:11.5px; color:#8E857D; margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto;">
       Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.
     </div>
   </div>
