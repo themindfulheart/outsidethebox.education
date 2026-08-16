@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Outside the Box Education</title>
+<meta name="description" content="Outside the Box Education helps families discover a different way to learn — one that starts with the child, not the curriculum.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#FAF3EC;
+--ink:#2E2A27;
+--body:#5C5650;
+--accent:#9C5F55;
+--accent-soft:#F1E3DE;
+--border:#E3C9BF;
+--footer-bg:#2E2A27;
+--footer-text:#C9BFB6;
+--footer-border:#46403B;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+margin:0;
+background:var(--bg);
+color:var(--ink);
+font-family:'Inter', sans-serif;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px;}
+/* ---------- Header (matches site-wide header) ---------- */
+header.site-header{
+position:sticky;top:0;z-index:50;
+background:rgba(250,243,236,0.92);
+backdrop-filter:blur(8px);
+border-bottom:1px solid var(--border);
+}
+header.site-header .nav{
+display:flex;align-items:center;justify-content:space-between;
+padding:14px 28px;
+}
+header.site-header .brand img{height:44px;width:auto;}
+header.site-header .brand{
+font-family:'Familjen Grotesk', sans-serif;font-weight:600;font-size:19px;
+color:var(--ink);letter-spacing:-0.2px;
+}
+header.site-header .nav-links{display:flex;gap:28px;}
+header.site-header .nav-links a{
+font-size:14.5px;font-weight:500;color:var(--ink);
+transition:color .15s ease;
+}
+header.site-header .nav-links a:hover{color:var(--accent);}
+header.site-header .nav-cta{
+background:var(--accent);color:#fff;font-weight:600;font-size:14px;
+padding:10px 20px;border-radius:30px;white-space:nowrap;
+}
+@‌media (max-width:820px){
+header.site-header .nav-links{display:none;}
+}
+/* ---------- Shared type ---------- */
+.eyebrow{
+font-family:'IBM Plex Mono', monospace;
+font-size:12px;letter-spacing:1.44px;text-transform:uppercase;
+color:var(--accent);margin:0 0 14px;font-weight:400;
+}
+h1,h2,h3{font-family:'Familjen Grotesk', sans-serif;font-weight:600;color:var(--ink);margin:0;}
+h1{font-size:46px;line-height:1.1;letter-spacing:-0.5px;}
+h2{font-size:30px;line-height:1.2;letter-spacing:-0.3px;}
+h3{font-size:20px;line-height:1.3;}
+p{font-size:17.5px;line-height:1.65;color:var(--body);margin:0 0 18px;}
+.lede{font-size:20px;line-height:1.6;color:var(--ink);}
+section{padding:76px 0;}
+section.tight{padding:56px 0;}
+.divider{border:none;border-top:1px solid var(--border);margin:0;}
+/* ---------- Hero ---------- */
+.hero{padding-top:64px;}
+.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
+.hero-copy p{max-width:520px;}
+.hero-image{border-radius:20px;overflow:hidden;box-shadow:0 24px 48px -24px rgba(46,42,27,0.35);}
+.hero-image img{width:100%;height:420px;object-fit:cover;}
+@‌media (max-width:900px){
+.hero-grid{grid-template-columns:1fr;gap:32px;}
+.hero-image img{height:280px;}
+}
+/* ---------- Two column (story / founder) ---------- */
+.two-col{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;}
+.two-col.reverse{grid-template-columns:1.1fr 0.9fr;}
+.two-col.reverse .col-image{order:2;}
+.col-image img{border-radius:18px;width:100%;height:380px;object-fit:cover;}
+@‌media (max-width:900px){
+.two-col,.two-col.reverse{grid-template-columns:1fr;gap:28px;}
+.two-col.reverse .col-image{order:0;}
+.col-image img{height:260px;}
+}
+/* ---------- What we do ---------- */
+.section-head{max-width:640px;margin-bottom:44px;}
+.section-head p{font-size:16.5px;}
+.feature-image{border-radius:18px;overflow:hidden;margin-bottom:44px;}
+.feature-image img{width:100%;height:300px;object-fit:cover;}
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.card{
+background:#fff;border:1px solid var(--border);border-radius:16px;
+padding:28px;
+}
+.card h3{margin-bottom:10px;}
+.card p{font-size:16px;margin-bottom:0;}
+@‌media (max-width:760px){.card-grid{grid-template-columns:1fr;}}
+/* ---------- Belief list ---------- */
+.belief-panel{
+background:var(--accent-soft);border-radius:20px;
+padding:48px;
+}
+.belief-list{list-style:none;margin:0;padding:0;display:grid;gap:22px;}
+.belief-list li{
+display:flex;gap:14px;font-size:18px;line-height:1.55;color:var(--ink);
+font-family:'Familjen Grotesk', sans-serif;font-weight:500;
+}
+.belief-list .spark{flex:none;}
+/* ---------- Founder ---------- */
+.founder-card{
+background:#fff;border:1px solid var(--border);border-radius:20px;
+padding:8px;
+}
+.founder-card .col-image img{height:420px;border-radius:14px;}
+.founder-copy .name-tag{
+font-family:'IBM Plex Mono', monospace;font-size:12px;color:var(--accent);
+letter-spacing:1.2px;text-transform:uppercase;margin-bottom:10px;
+}
+/* ---------- Join movement ---------- */
+.movement{
+background:var(--ink);border-radius:24px;padding:64px;color:#fff;
+}
+.movement .eyebrow{color:#E3B7A9;}
+.movement h2{color:#fff;}
+.movement p{color:#D9D2CC;}
+.movement-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;}
+.movement-images{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.movement-images img{width:100%;height:210px;object-fit:cover;border-radius:14px;}
+.movement-images .tall{grid-column:1 / -1;height:170px;}
+.closing-line{
+font-family:'Familjen Grotesk', sans-serif;font-size:24px;font-weight:600;
+color:#fff;margin-top:8px;
+}
+@‌media (max-width:900px){
+.movement{padding:40px 28px;}
+.movement-grid{grid-template-columns:1fr;gap:28px;}
+}
+/* ---------- Footer (matches site-wide footer) ---------- */
+footer.site-footer{
+background:var(--footer-bg);color:var(--footer-text);
+padding:56px 28px 28px;margin-top:0;
+}
+footer.site-footer .footer-top{
+display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;
+padding-bottom:36px;
+}
+footer.site-footer .footer-about{max-width:320px;}
+footer.site-footer .footer-about p{color:var(--footer-text);font-size:15px;margin-top:14px;}
+footer.site-footer .footer-cols{display:flex;gap:64px;flex-wrap:wrap;}
+footer.site-footer .footer-col h4{
+font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:1.2px;
+color:#9C9089;text-transform:uppercase;margin:0 0 16px;font-weight:400;
+}
+footer.site-footer .footer-col a{
+display:block;font-size:14.5px;color:var(--footer-text);margin-bottom:12px;
+}
+footer.site-footer .footer-col a:hover{color:#fff;}
+footer.site-footer .footer-bottom{
+border-top:1px solid var(--footer-border);
+padding-top:24px;font-size:13.5px;color:#8F857D;
+}
+footer.site-footer .footer-bottom p{color:#8F857D;font-size:13.5px;margin:0 0 8px;}
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="nav">
+<a href="/" class="brand">Outside the Box Education</a>
+<nav class="nav-links">
+<a href="/#pillars">What's Inside</a>
+<a href="/#episodes">Latest</a>
+<a href="/#voices">Voices</a>
+<a href="/#get-involved">Get Involved</a>
+<a href="/#subscribe">Subscribe</a>
+</nav>
+<a href="/#subscribe" class="nav-cta">Join the list</a>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">About Outside the Box Education</p>
+<h1>Learning was never meant to be one-size-fits-all.</h1>
+<p class="lede" style="margin-top:22px;">Every child is born with unique strengths, interests, questions, and ways of understanding the world. But too often, children are measured by a system designed for averages instead of supported as individuals.</p>
+<p>Outside the Box Education exists to help families discover a different way. We believe education should begin with the child — not the curriculum, the test, or the system.</p>
+</div>
+<div class="hero-image">
+<img src="images/shutterstock_2288408773.jpg" alt="A joyful family playing together outdoors">
+</div>
+</div>
+</section>
+<hr class="divider">
+<!-- OUR STORY -->
+<section>
+<div class="wrap two-col">
+<div class="col-image">
+<img src="images/shutterstock_2657969759.jpg" alt="A child drawing the solar system on a chalkboard">
+</div>
+<div class="col-copy">
+<p class="eyebrow">Our Story</p>
+<h2>What if struggling learners aren't failing?</h2>
+<p style="margin-top:18px;">Outside the Box Education began with a simple question: what if the way we are teaching kids simply isn't the way they learn best?</p>
+<p>After years as an elementary teacher, curriculum writer, and homeschool educator, founder Mindi Eldredge saw the same pattern again and again: children who were capable, creative, and curious were losing confidence because they didn't fit into a traditional educational model.</p>
+<p>When her own children faced learning challenges, she discovered the power of looking beyond "catching up" and instead focusing on understanding how each child learns best.</p>
+<p style="margin-bottom:0;">That experience became the foundation for Outside the Box Education — a place where families can find encouragement, research, resources, and real stories from parents creating meaningful educational paths for their children.</p>
+</div>
+</div>
+</section>
+<hr class="divider">
+<!-- WHAT WE DO -->
+<section>
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">What We Do</p>
+<h2>Helping parents think differently about learning.</h2>
+</div>
+<div class="feature-image">
+<img src="images/shutterstock_2638469477.jpg" alt="A young girl exploring math with a colorful abacus">
+</div>
+<div class="card-grid">
+<div class="card">
+<h3>Real Homeschool Stories</h3>
+<p>Hear from families who have taken different paths, overcome challenges, and discovered what works for their children.</p>
+</div>
+<div class="card">
+<h3>Research & Resources</h3>
+<p>Explore articles and guides about learning styles, educational approaches, child development, organization, funding opportunities, and more.</p>
+</div>
+<div class="card">
+<h3>Curriculum Reviews & Recommendations</h3>
+<p>Find resources that match your family's goals, values, and your child's unique learning needs.</p>
+</div>
+<div class="card">
+<h3>Practical Homeschool Support</h3>
+<p>Gain ideas and encouragement to create an education that works for your child and your family.</p>
+</div>
+</div>
+</div>
+</section>
+<hr class="divider">
+<!-- OUR BELIEF -->
+<section class="tight">
+<div class="wrap">
+<div class="belief-panel">
+<p class="eyebrow">Our Belief</p>
+<h2 style="margin-bottom:28px;">What we believe</h2>
+<ul class="belief-list">
+<li><span class="spark">✨</span><span>Children are not behind — they are developing in their own time and in their own way.</span></li>
+<li><span class="spark">✨</span><span>Education should inspire curiosity, not just measure performance.</span></li>
+<li><span class="spark">✨</span><span>Parents know their children better than any test score can show.</span></li>
+<li><span class="spark">✨</span><span>There is more than one path to a successful education.</span></li>
+<li><span class="spark">✨</span><span>Learning can happen anywhere, and it should connect to real life.</span></li>
+</ul>
+</div>
+</div>
+</section>
+<hr class="divider">
+<!-- MEET THE FOUNDER -->
+<section>
+<div class="wrap">
+<div class="founder-card">
+<div class="two-col" style="padding:24px;">
+<div class="col-image">
+<img src="images/483E4682-C39C-47E9-9FC2-CFCB2AA4E1D1.JPEG" alt="Mindi Eldredge, founder of Outside the Box Education">
+</div>
+<div class="founder-copy" style="padding:24px 24px 24px 8px;">
+<p class="name-tag">Meet the Founder</p>
+<h2>Mindi Eldredge</h2>
+<p style="margin-top:18px;">Mindi Eldredge is an educator, author, curriculum developer, homeschool advocate, and mother of three children ages 13–20, with a passion for helping children learn in ways that honor their individuality.</p>
+<p>With a background in elementary education, years of experience creating curriculum, and over a decade of hands-on experience homeschooling her own children, Mindi has dedicated her work to helping families move beyond traditional expectations and discover educational approaches that allow children to thrive.</p>
+<p style="margin-bottom:0;">Through Outside the Box Education and The Mindful Heart, she creates resources designed to encourage parents, support learners, and make meaningful, accessible education available to families everywhere.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- JOIN THE MOVEMENT -->
+<section style="padding-top:20px;">
+<div class="wrap">
+<div class="movement">
+<div class="movement-grid">
+<div class="movement-copy">
+<p class="eyebrow">Join the Movement</p>
+<h2>An education that fits who your child is.</h2>
+<p style="margin-top:18px;">Whether you are new to homeschooling, searching for answers because traditional school isn't working, or simply looking for a better way to support your child, Outside the Box Education is here to help.</p>
+<p class="closing-line">Because every child deserves an education that fits who they are.</p>
+</div>
+<div class="movement-images">
+<img class="tall" src="images/shutterstock_2731746599.jpg" alt="A family laughing together outdoors">
+<img src="images/shutterstock_256329670.jpg" alt="A young couple smiling in a park">
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-top">
+<div class="footer-about">
+<div style="font-family:'Familjen Grotesk', sans-serif;font-weight:600;font-size:19px;color:#fff;">Outside the Box Education</div>
+<p>A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
+</div>
+<div class="footer-cols">
+<div class="footer-col">
+<h4>Explore</h4>
+<a href="/#pillars">What's Inside</a>
+<a href="/#episodes">Latest resources</a>
+<a href="/#voices">Reader stories</a>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<a href="#">About us</a>
+<a href="#">Contact</a>
+<a href="#">Press</a>
+</div>
+<div class="footer-col">
+<h4>Follow</h4>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
+<a href="#">Apple Podcasts</a>
+</div>
+</div>
+</div>
+<div class="wrap footer-bottom">
+<p>© 2026 Outside the Box Education. All rights reserved.</p>
+<p>Made for families, by families.</p>
+<p>Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.</p>
+</div>
+</footer>
+</body>
+</html>
