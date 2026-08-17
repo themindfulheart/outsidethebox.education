@@ -16,6 +16,7 @@
   --rose-deep:#9C5F55;
   --blush:#F0DFD8;
   --blush-line:#E3C9BF;
+  --light-grey:#9E9796;
   --radius-lg:20px;
   --radius-md:12px;
 }
@@ -31,30 +32,17 @@ body{
 @media (prefers-reduced-motion: reduce){ *{animation-duration:0.001s !important; transition-duration:0.001s !important;} }
 a{color:inherit;}
 img{max-width:100%; display:block;}
-.eyebrow{
-  font-family:'IBM Plex Mono', monospace;
-  font-size:12px; letter-spacing:.12em; text-transform:uppercase;
-  color:var(--rose-deep);
-}
-.wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+figure{margin:0;}
+.wrap:not(.section-head){margin:0 auto; padding:0 28px;}
 h1,h2,h3{
   font-family:'Familjen Grotesk', sans-serif;
   font-weight:600;
   color:var(--charcoal);
-  margin:0;
   letter-spacing:-0.01em;
 }
 p{margin:0 0 1rem;}
 
-.box-mark{
-  width:26px; height:26px; border:2.2px solid currentColor; border-radius:5px; position:relative; flex:none;
-}
-.box-mark::after{
-  content:""; position:absolute; left:50%; top:-7px; width:12px; height:2.2px; background:currentColor;
-  transform:translateX(-50%) rotate(-14deg);
-}
-
-header{
+header:has(nav){
   position:sticky; top:0; z-index:50;
   background:rgba(250,243,236,0.92);
   backdrop-filter:blur(6px);
@@ -74,89 +62,31 @@ header{
   text-decoration:none; white-space:nowrap;
 }
 .nav-cta:hover{background:#84463d;}
-.menu-btn{display:none; background:none; border:1.5px solid var(--charcoal); border-radius:8px; padding:8px 10px; font-size:16px; color:var(--charcoal); cursor:pointer;}
-
-.hero{padding:56px 0 0;}
-.hero-content{text-align:center; max-width:700px; margin:0 auto 36px;}
-.hero-content .eyebrow{display:block; margin-bottom:14px;}
-.hero-content h1{font-size:46px; line-height:1.14; margin:0 0 18px;}
-.hero-content .lede{font-size:17.5px; color:var(--charcoal-soft); max-width:56ch; margin:0 auto;}
-.hero-ctas{display:flex; gap:14px; margin-top:26px; flex-wrap:wrap; justify-content:center;}
-.btn{
-  font-size:14.5px; font-weight:600;
-  padding:13px 24px; border-radius:30px; text-decoration:none; display:inline-block;
-  border:1.5px solid transparent;
-}
-.btn-solid{background:var(--rose-deep); color:#fff;}
-.btn-solid:hover{background:#84463d;}
-.btn-outline{background:transparent; color:var(--charcoal); border-color:var(--charcoal);}
-.btn-outline:hover{background:rgba(46,42,39,0.06);}
-.hero-photo{
-  position:relative; border-radius:28px; overflow:hidden;
-  min-height:420px;
-}
-.hero-photo img{width:100%; height:100%; object-fit:cover; display:block; max-height:520px;}
-
-.mission{padding:44px 0 8px; text-align:center;}
-.mission p{
-  font-family:'Familjen Grotesk', sans-serif; font-weight:500; font-size:21px; color:var(--charcoal-soft);
-  max-width:52ch; margin:0 auto;
-}
 
 .section{padding:70px 0;}
-.section-head{max-width:60ch; margin-bottom:36px;}
-.section-head h2{font-size:30px; margin:10px 0 12px;}
-.section-head .lede{color:var(--charcoal-soft); font-size:16.5px;}
+.section-head{max-width:60ch; font-size:30px; text-align:center; margin:0 auto 30px;}
+.lede{color:var(--charcoal-soft); font-size:16.5px;}
+#first-p{margin-top:30px;}
 
-.pillars{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
-.pillar{background:var(--blush); border-radius:var(--radius-md); padding:26px 22px;}
-.pillar .num{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--rose-deep); margin-bottom:10px; display:block;}
-.pillar h3{font-size:18px; margin-bottom:8px;}
-.pillar p{font-size:14.5px; color:var(--charcoal-soft); margin-bottom:0;}
-
-.moments{padding:0 0 70px;}
-.moments-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:14px;}
-.moment{border-radius:var(--radius-md); overflow:hidden; aspect-ratio:1/1;}
-.moment img{width:100%; height:100%; object-fit:cover; transition:transform .4s ease;}
-.moment:hover img{transform:scale(1.05);}
-
-.trust{background:var(--charcoal); color:var(--cream); padding:46px 0;}
-.trust .wrap{display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; align-items:center;}
-.trust-stat{min-width:170px; max-width:220px;}
-.trust-stat .num{font-family:'Familjen Grotesk',sans-serif; font-weight:700; font-size:21px; line-height:1.2; display:block; margin-bottom:6px; color:#fff;}
-.trust-stat .label{font-size:13px; color:#C9BFB6;}
+hr{border:none;border-top:3px dashed var(--blush-line);margin-top:-10px}
 
 .catalog{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-.cat-card{background:#fff; border:1px solid var(--blush-line); border-radius:var(--radius-md); overflow:hidden; display:flex; flex-direction:column;}
+.cat-margin{margin-bottom:172px;margin-left:150px;}
+.cat-card{background:#fff;border:1px solid var(--blush-line);overflow:hidden; padding:0px 20px 22px;display:flex;position:absolute;position-anchor:--img-anchor;width:anchor-size(width);flex-direction:column}
+.cat-card h3{font-size:17px; padding-top:5px;}
+.cat-card p{font-size:14px; color:var(--charcoal-soft);}
+.cat-card *{margin-bottom:0;}
+.cat-card > p:first-of-type {color:var(--light-grey);}
+.cat-card .lede{padding-top:10px;}
 a.cat-card{text-decoration:none; color:inherit; transition:box-shadow .18s ease, transform .18s ease;}
 a.cat-card:hover{box-shadow:0 8px 22px rgba(46,42,39,0.08); transform:translateY(-2px); border-color:var(--rose);}
 a.cat-card:hover h3{color:var(--rose-deep);}
-.cat-thumb{height:180px; overflow:hidden; position:relative;}
-.cat-thumb img{width:100%; height:100%; object-fit:cover;}
-.cat-body{padding:18px 20px 22px;}
-.cat-tag{font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--rose-deep); margin-bottom:8px; display:block;}
-.cat-card h3{font-size:17px; margin-bottom:8px;}
-.cat-card p{font-size:14px; color:var(--charcoal-soft); margin-bottom:0;}
+.cat-thumb{position:relative;}
+.cat-thumb img{width:auto; max-height:250px;anchor-name:--img-anchor}
 
-.testi-wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:32px; align-items:center;}
-.testi-photo{border-radius:var(--radius-lg); overflow:hidden; height:100%;}
-.testi-photo img{width:100%; height:100%; object-fit:cover; min-height:320px;}
-.testi-cards{display:flex; flex-direction:column; gap:16px;}
-.testi-card{background:#fff; border:1px solid var(--blush-line); border-radius:var(--radius-md); padding:22px 24px;}
-.testi-card p{font-size:15.5px; color:var(--charcoal); margin-bottom:12px;}
-.testi-card .who{font-size:13px; font-weight:600; color:var(--rose-deep);}
-
-.signup-card{background:var(--blush); border-radius:var(--radius-lg); padding:44px; display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center;}
-.signup-card h2{font-size:26px; margin-bottom:10px;}
-.signup-card .lede{color:var(--charcoal-soft); margin-bottom:0;}
-.signup{display:flex; gap:10px; flex-wrap:wrap;}
-.signup input[type=email]{
-  font-family:'Inter',sans-serif; font-size:14px;
-  padding:13px 16px; border:1.5px solid var(--rose-deep); border-radius:30px; background:#fff; min-width:240px;
-}
-.signup input[type=email]:focus{outline:3px solid var(--rose); outline-offset:1px;}
 
 footer{background:var(--charcoal); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
+footer .wrap, header .wrap{max-width:1160px;}
 .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
 footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
 footer ul{list-style:none; margin:0; padding:0;}
@@ -166,32 +96,104 @@ footer a:hover{text-decoration:underline;}
 .foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
 
 @media (max-width:900px){
-  .hero-content h1{font-size:34px;}
-  .pillars{grid-template-columns:repeat(2,1fr);}
   .catalog{grid-template-columns:repeat(2,1fr);}
-  .testi-wrap{grid-template-columns:1fr;}
-  .testi-photo img{min-height:220px;}
   .foot-grid{grid-template-columns:1fr 1fr;}
-  .signup-card{grid-template-columns:1fr;}
-  .moments-grid{grid-template-columns:repeat(3,1fr);}
 }
 @media (max-width:640px){
   .nav-links{display:none;}
-  .menu-btn{display:inline-block;}
-  .hero-photo{min-height:280px;}
-  .hero-content h1{font-size:28px;}
-  .pillars{grid-template-columns:1fr;}
   .catalog{grid-template-columns:1fr;}
   .foot-grid{grid-template-columns:1fr 1fr;}
-  .mission p{font-size:18px;}
-  .moments-grid{grid-template-columns:repeat(2,1fr);}
 }
 :focus-visible{outline:3px solid var(--rose); outline-offset:2px;}
 </style>
 </head>
 <body>
-<h1>
-  This will be the newest page of our website!
-  </h1>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <img src="https://i.postimg.cc/Pr9f4xfK/image1.png" alt="Outside the Box Education logo">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#pillars">What's Inside</a>
+      <a href="index.html#episodes">Latest</a>
+      <a href="index.html#voices">Voices</a>
+      <a href="index.html#get-involved">Get Involved</a>
+      <a href="index.html#subscribe">Subscribe</a>
+    </nav>
+    <a href="index.html#subscribe" class="nav-cta">Join the list</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="section" id="first-section">
+  <article class="wrap">
+      <h2 class="section-head">The Outside the Box Education Podcast</h2>
+      <hr>
+      <p id="first-p">Every homeschooling journey begins with a story.</p>
+      <p>The Outside the Box Education Podcast shares the real experiences of families who chose a different path for their children’s education. Through honest conversations and personal stories, we explore why families left traditional schools, how they discovered new ways of learning, and the challenges and triumphs that shaped their journey.</p>
+      <p>This podcast goes beyond typical homeschool interviews. These are stories of children who didn’t fit the system, parents who searched for answers, and families who found confidence, connection, and a love of learning outside the box.</p>
+      <p>You’ll hear stories about homeschooling children with unique learning needs, teaching multiple ages, discovering unexpected strengths, overcoming struggles, and creating an education that truly fits each child.
+      Whether you are new to homeschooling, considering a different educational path, or simply looking for inspiration, Outside the Box Education Podcast reminds us that every child learns differently—and every family has a story worth sharing.</p>
+      <p>Because sometimes the greatest transformations happen when we stop asking, “How do we make a child fit the system?” and start asking, “How can we create a system that fits the child?”</p>
+    </article>
+  </section>
+
+  <section class="section catalog">
+    <article class="cat-margin">
+      <figure class="cat-thumb">
+        <img src="https://i.postimg.cc/d1K5HCV2/Podcast-Thumnails.png" alt="Her Daughter Was Failing School Until They Found a Different Way">
+        </figure>
+    <div class="cat-card">
+        <h3>Podcast #?: Title Will Go Here</h3>
+        <p>Date will go here | Length will go here</p>
+        <p class="lede">Episode description . . .</p>
+      </div>
+        </article>
+        </section>
+</main>
+<div></div>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-foot" style="background:var(--cream); display:inline-flex; padding:10px 14px 8px; border-radius:16px;">
+          <img src="https://i.postimg.cc/Pr9f4xfK/image1.png" alt="Outside the Box Education logo">        
+        </div>
+        <p style="margin-top:14px; font-size:14px; color:#8E857D; max-width:34ch;">A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
+      </div>
+      <div>
+                <h4>Explore</h4>
+        <ul>
+          <li><a href="#pillars">What's Inside</a></li>
+          <li><a href="#episodes">Latest resources</a></li>
+          <li><a href="#voices">Reader stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Apple Podcasts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Outside the Box Education. All rights reserved.</span>
+      <span>Made for families, by families.</span>
+    </div>
+    <div style="text-align:center; font-size:11.5px; color:#8E857D; margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto;">
+      Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.
+    </div>
+  </div>
+</footer>
   </body>
     </html>
