@@ -127,16 +127,17 @@ header:has(nav){
 .trust-stat .label{font-size:13px; color:#C9BFB6;}
 
 .catalog{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-.cat-card{background:#fff; border:1px solid var(--blush-line); border-radius:var(--radius-md); overflow:hidden; display:flex; flex-direction:column;}
-a.cat-card{text-decoration:none; color:inherit; transition:box-shadow .18s ease, transform .18s ease;}
-a.cat-card:hover{box-shadow:0 8px 22px rgba(46,42,39,0.08); transform:translateY(-2px); border-color:var(--rose);}
-a.cat-card:hover h3{color:var(--rose-deep);}
+.cat-card{background:#fff; border:1px solid var(--blush-line); overflow:hidden; display:flex; flex-direction:column;}
+a.cat-card, a.one-card{text-decoration:none; transition:box-shadow .18s ease, transform .18s ease;}
+a.cat-card:hover, a.one-card:hover{box-shadow:0 8px 22px rgba(46,42,39,0.08); transform:translateY(-2px);border-color:var(--rose);}
+a.cat-card:hover h3, a.one-card:hover h3{color:var(--rose-deep);}
 .cat-thumb{height:180px; overflow:hidden; position:relative;}
 .cat-thumb img{width:100%; height:100%; object-fit:cover;}
 .cat-body{padding:18px 20px 22px;}
 .cat-tag{font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--rose-deep); margin-bottom:8px; display:block;}
 .cat-card h3{font-size:17px; margin-bottom:8px;}
 .cat-card p{font-size:14px; color:var(--charcoal-soft); margin-bottom:0;}
+#get-involved .cat-body{text-align:center;padding-top:5px;padding-bottom:5px;}
 
 .testi-wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:32px; align-items:center;}
 .testi-photo{border-radius:var(--radius-lg); overflow:hidden; height:100%;}
@@ -353,6 +354,38 @@ footer a:hover{text-decoration:underline;}
         <h2>Join the Movement</h2>
         <p class="lede">We believe every child deserves an education that fits who they are. Volunteer your time, share your talents, or make a donation to help Outside the Box Education transform the way children learn.</p>
       </header>
+      <section class="catalog">
+        <a href="coming-soon.html" class="one-card">
+        <article>
+          <figure class="cat-thumb">
+          <img src="https://i.postimg.cc/HsGzdggY/shutterstock-2469537023.jpg" alt="Hands holding a small plant in soil">
+          </figure>
+        <div class="cat-body cat-card">
+          <h3>Give Your Time</h3>
+        </div>
+        </article>
+        </a>
+        <a href="coming-soon.html" class="one-card">
+        <article>
+          <figure class="cat-thumb">
+          <img src="https://i.postimg.cc/gr9N79Y9/shutterstock-2578921169.jpg" alt="Microphones on a table">
+          </figure>
+        <div class="cat-card cat-body">
+          <h3>Share Your Gifts</h3>
+        </div>
+        </article>
+        </a>
+        <a href="coming-soon.html" class="one-card">
+        <article> 
+          <figure class="cat-thumb">
+          <img src="https://i.postimg.cc/rstKp35p/shutterstock-571888441.jpg" alt="Hand holding out envelope with a heart seal">
+          </figure>
+        <div class="cat-card cat-body">
+          <h3>Give Financially</h3>
+        </div>
+        </article>
+        </a>
+        </section>
     </article>
     </section>
 
