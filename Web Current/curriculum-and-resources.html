@@ -16,6 +16,7 @@
 --ink-soft:#6B645D;
 --clay:#9C5F55;
 --clay-dark:#7C4B43;
+--blush-line:#E3C9BF;
 --line:rgba(46,42,39,0.12);
 --footer-bg:#2E2A27;
 --footer-text:#C9BFB6;
@@ -83,14 +84,11 @@ nav.main-nav{display:none;}
 .hero{background:var(--cream);}
 .hero-media{width:100%;display:block;}
 .hero-media img{width:100%;height:auto;max-height:520px;display:block;}
-.sr-only{
-position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-clip:rect(0,0,0,0);white-space:nowrap;border:0;
-}
 .hero-sub{
 max-width:640px;margin:0 auto;text-align:center;
 padding:28px 32px 48px;
 }
+hr{border:none;border-top:3px dashed var(--blush-line);margin-bottom:20px;}
 .hero-eyebrow{
 font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
 color:var(--clay-dark);margin-bottom:12px;
@@ -167,11 +165,9 @@ footer a:hover{text-decoration:underline;}
 </div>
 </header>
 <section class="hero">
-<h1 class="sr-only">Curriculum & Resource Reviews</h1>
-<div class="hero-media">
-<img class="wrap" src="https://i.postimg.cc/pXTzb6Mn/shutterstock-2820931125-(1).jpg" alt="Curriculum and Resource Reviews — a stack of Science, History, Language Arts, and Math books surrounded by gold stars">
-</div>
-<div class="hero-sub">
+<article class="hero-sub">
+<h1>Curriculum & Resource Reviews</h1>
+<hr>
 <div class="hero-eyebrow">Reviewed by real homeschool parents</div>
 <p>Honest reviews, side-by-side comparisons, and trusted recommendations to help you find curriculum and educational resources that fit your family.</p>
 </div>
