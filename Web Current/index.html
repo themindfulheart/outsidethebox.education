@@ -90,8 +90,6 @@ header:has(nav){
 }
 .btn-solid{background:var(--rose-deep); color:#fff;}
 .btn-solid:hover{background:#84463d;}
-.btn-outline{background:transparent; color:var(--charcoal); border-color:var(--charcoal);}
-.btn-outline:hover{background:rgba(46,42,39,0.06);}
 .hero-photo{
   position:relative; border-radius:28px; overflow:hidden;
   min-height:420px;
@@ -177,8 +175,10 @@ footer a:hover{text-decoration:underline;}
   .signup-card{grid-template-columns:1fr;}
   .moments-grid{grid-template-columns:repeat(3,1fr);}
 }
-@media (max-width:640px){
+@media (max-width:775px){
   .nav-links{display:none;}
+}
+@media (max-width:640px){
   .menu-btn{display:inline-block;}
   .hero-photo{min-height:280px;}
   .hero-content h1{font-size:28px;}
@@ -200,12 +200,12 @@ footer a:hover{text-decoration:underline;}
     </a>
     <nav class="nav-links">
       <a href="#pillars">What's Inside</a>
-      <a href="#episodes">Latest</a>
-      <a href="#voices">Voices</a>
-      <a href="#get-involved">Get Involved</a>
-      <a href="#subscribe">Subscribe</a>
+      <a href="coming-soon.html">Shop</a>
+      <a href="about-us.html">About</a>
+      <!--This should be ready to commit as soon as I learn where to send SL link-->
+      <a href="#episodes">Start Here</a>
     </nav>
-    <a href="#subscribe" class="nav-cta">Join the list</a>
+    <a href="#subscribe" class="nav-cta">Get Weekly Homeschool Help</a>
   </div>
 </header>
 
@@ -216,8 +216,7 @@ footer a:hover{text-decoration:underline;}
       <h1>Helping families homeschool with confidence.</h1>
       <p class="lede">Learn how to homeschool with confidence through practical articles, videos, podcasts, curriculum reviews, teaching strategies, and thoughtfully designed resources that help children develop a lifelong love of learning.</p>
       <div class="hero-ctas">
-        <a href="#episodes" class="btn btn-solid">Start Learning</a>
-        <a href="#pillars" class="btn btn-outline">Explore Our Curriculum</a>
+        <a href="#episodes" class="btn btn-solid">Homeschool With Confidence</a>
       </div>
     </div>
     <div class="hero-photo">
