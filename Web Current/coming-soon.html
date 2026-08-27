@@ -28,49 +28,8 @@ img{width:auto; height:300px; display:block;}
 a{color:inherit;}
 figure {margin:0;}
 @media (prefers-reduced-motion: reduce){ *{animation-duration:0.001s !important; transition-duration:0.001s !important;} }
-/* Header */
-header{
-position:sticky;top:0;z-index:50;
-background:rgba(250,243,236,0.92);
-backdrop-filter:blur(6px);
-border-bottom:1px solid var(--line);
-}
-.header-inner{
-max-width:1180px;margin:0 auto;padding:16px 32px;
-display:flex;align-items:center;justify-content:space-between;gap:24px;
-}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.brand img, .brand-foot img{height:92px; width:auto; display:block;}
-.brand-mark{
-width:38px;height:38px;border-radius:10px;
-background:var(--rose-deep);
-display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
-.brand-mark svg{width:20px;height:20px;}
-.brand-name{font-size:17px;font-weight:600;color:var(--ink);white-space:nowrap;}
-nav.main-nav{display:flex;align-items:center;gap:30px;}
-nav.main-nav a{
-font-size:14.5px;font-weight:500;color:var(--ink);text-decoration:none;
-padding-bottom:2px;
-}
-nav.main-nav a.current{
-color:var(--clay-dark);
-border-bottom:2px solid var(--rose-deep);
-}
-nav.main-nav a:hover{color:var(--clay-dark);}
-.btn-pill{
-display:inline-flex;align-items:center;justify-content:center;
-background:var(--rose-deep);color:#fff;
-font-size:14.5px;font-weight:600;
-padding:10px 22px;border-radius:30px;
-text-decoration:none;white-space:nowrap;
-transition:background .15s ease;
-}
-.btn-pill:hover{background:var(--clay-dark);}
-.nav-toggle{display:none;}
-@‌media (max-width:900px){
-nav.main-nav{display:none;}
-.nav-toggle{display:block;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;}
+#header-placeholder{
+    position:sticky; top:0; z-index:50;
 }
 /* Body */
 h2{
@@ -86,35 +45,10 @@ p{margin:0 0 1rem;}
 .center *:not(hr){text-align:center; margin:0 auto 30px; max-width:1160px;}
 #first-p{margin-top:30px;}
 hr{border:none;border-top:3px dashed var(--blush-line);margin-top:-10px;}
-/* Footer */
- footer{background:var(--ink); color:#C9BFB6; padding:52px 0 34px;margin-top:20px;}
- .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
-.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
-footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
-footer ul{list-style:none; margin:0; padding:0;}
-footer li{margin-bottom:9px; font-size:14.5px;}
-footer a, .no-underline{text-decoration:none;}
-footer a:hover{text-decoration:underline;}
-.foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
-  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
-  <header>
-<div class="header-inner">
-<a class="brand" href="https://outsidethebox.education/">
-  <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">
-</a>
-<nav class="main-nav" aria-label="Primary">
-<a href="https://outsidethebox.education/#pillars">What’s Inside</a>
-<a href="https://outsidethebox.education/#episodes">Latest</a>
-<a href="https://outsidethebox.education/#voices">Voices</a>
-<a href="https://outsidethebox.education/#get-involved">Get Involved</a>
-</nav>
-<a class="btn-pill" href="https://outsidethebox.education/#subscribe">Join the list</a>
-</div>
-</header>
+  <div id="header-placeholder"></div>
 <main class="section">
   <section class="center">
     <h2>Coming Soon!</h2>
@@ -126,47 +60,18 @@ footer a:hover{text-decoration:underline;}
     <p>Until then, you can click on our logo to return to our home page and keep exploring.</p>
   </section>
   </main>
-  <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="brand-foot" style="background:var(--cream); display:inline-flex; padding:10px 14px 8px; border-radius:16px;">
-        <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">        </div>
-        <p style="margin-top:14px; font-size:14px; color:#8E857D; max-width:34ch;">A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#pillars">What's Inside</a></li>
-          <li><a href="#episodes">Latest resources</a></li>
-          <li><a href="#voices">Reader stories</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Follow</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Apple Podcasts</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Outside the Box Education. All rights reserved.</span>
-      <span>Made for families, by families.</span>
-    </div>
-    <div style="text-align:center; font-size:11.5px; color:#8E857D; margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto;">
-      Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.
-    </div>
-  </div>
-</footer>
+  <div id="footer-placeholder"></div>
+    <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+        </script>
   </body>
 </html>
