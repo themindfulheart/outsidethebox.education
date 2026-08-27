@@ -16,6 +16,7 @@
 --accent:#9C5F55;
 --accent-soft:#F1E3DE;
 --border:#E3C9BF;
+--rose:#C98C82;
 --footer-bg:#2E2A27;
 --footer-text:#C9BFB6;
 --footer-border:#46403B;
@@ -27,39 +28,34 @@ margin:0;
 background:var(--bg);
 color:var(--ink);
 font-family:'Inter', sans-serif;
--webkit-font-smoothing:antialiased;
+line-height: 1.65;
 }
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 .wrap{max-width:1160px;margin:0 auto;padding:0 28px;}
 /* ---------- Header (matches site-wide header) ---------- */
-header.site-header{
-position:sticky;top:0;z-index:50;
-background:rgba(250,243,236,0.92);
-backdrop-filter:blur(8px);
-border-bottom:1px solid var(--border);
+header:has(nav){
+  position:sticky; top:0; z-index:50;
+  background:rgba(250,243,236,0.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--border);
 }
-header.site-header .nav{
-display:flex;align-items:center;justify-content:space-between;
-padding:14px 28px;
+.nav{display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
+.brand{padding:4px 0;}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--body);}
+.brand img{height:92px; width:auto; display:block;}
+.brand-foot img{height:64px; width:auto; display:block; border-radius:10px;}
+.nav-links{display:flex; gap:28px; font-size:14.5px; font-weight:500;}
+.nav-links a{text-decoration:none; border-bottom:2px solid transparent; padding-bottom:3px;}
+.nav-links a:hover{border-color:var(--rose);}
+.nav-cta{
+  font-size:14px; font-weight:600;
+  background:var(--accent); color:#fff; padding:10px 20px; border-radius:30px;
+  text-decoration:none; white-space:nowrap;
 }
-header.site-header .brand img{height:44px;width:auto;}
-header.site-header .brand{
-font-family:'Familjen Grotesk', sans-serif;font-weight:600;font-size:19px;
-color:var(--ink);letter-spacing:-0.2px;
-}
-header.site-header .nav-links{display:flex;gap:28px;}
-header.site-header .nav-links a{
-font-size:14.5px;font-weight:500;color:var(--ink);
-transition:color .15s ease;
-}
-header.site-header .nav-links a:hover{color:var(--accent);}
-header.site-header .nav-cta{
-background:var(--accent);color:#fff;font-weight:600;font-size:14px;
-padding:10px 20px;border-radius:30px;white-space:nowrap;
-}
-@‌media (max-width:820px){
-header.site-header .nav-links{display:none;}
+.nav-cta:hover{background:#84463d;}
+@media (max-width:775px){
+  .nav-links{display:none;}
 }
 /* ---------- Shared type ---------- */
 .eyebrow{
@@ -150,46 +146,33 @@ color:#fff;margin-top:8px;
 .movement-grid{grid-template-columns:1fr;gap:28px;}
 }
 /* ---------- Footer (matches site-wide footer) ---------- */
-footer.site-footer{
-background:var(--footer-bg);color:var(--footer-text);
-padding:56px 28px 28px;margin-top:0;
+footer{background:var(--ink); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
+footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
+footer ul{list-style:none; margin:0; padding:0;}
+footer li{margin-bottom:9px; font-size:14.5px;}
+footer a, .no-underline{text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+.foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
+@media (max-width:900px){
+  .foot-grid{grid-template-columns:1fr 1fr;}
 }
-footer.site-footer .footer-top{
-display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;
-padding-bottom:36px;
-}
-footer.site-footer .footer-about{max-width:320px;}
-footer.site-footer .footer-about p{color:var(--footer-text);font-size:15px;margin-top:14px;}
-footer.site-footer .footer-cols{display:flex;gap:64px;flex-wrap:wrap;}
-footer.site-footer .footer-col h4{
-font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:1.2px;
-color:#9C9089;text-transform:uppercase;margin:0 0 16px;font-weight:400;
-}
-footer.site-footer .footer-col a{
-display:block;font-size:14.5px;color:var(--footer-text);margin-bottom:12px;
-}
-footer.site-footer .footer-col a:hover{color:#fff;}
-footer.site-footer .footer-bottom{
-border-top:1px solid var(--footer-border);
-padding-top:24px;font-size:13.5px;color:#8F857D;
-}
-footer.site-footer .footer-bottom p{color:#8F857D;font-size:13.5px;margin:0 0 8px;}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
-    <a href="#top" class="brand">
+    <a href="index.html#top" class="brand">
       <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">
     </a>
     <nav class="nav-links">
-      <a href="#pillars">What's Inside</a>
-      <a href="#episodes">Latest</a>
-      <a href="#voices">Voices</a>
-      <a href="#get-involved">Get Involved</a>
-      <a href="#subscribe">Subscribe</a>
+      <a href="index.html#pillars">What's Inside</a>
+      <a href="coming-soon.html">Shop</a>
+      <a href="about-us.html">About Us</a>
+      <!--This should be ready to commit as soon as I learn where to send SL link-->
+      <a href="index.html#episodes">Start Here</a>
     </nav>
-    <a href="#subscribe" class="nav-cta">Join the list</a>
+    <a href="index.html#subscribe" class="nav-cta">Get Weekly Homeschool Help</a>
   </div>
 </header>
 <main>
@@ -312,38 +295,47 @@ footer.site-footer .footer-bottom p{color:#8F857D;font-size:13.5px;margin:0 0 8p
 </div>
 </section>
 </main>
-<footer class="site-footer">
-<div class="wrap footer-top">
-<div class="footer-about">
-<div style="font-family:'Familjen Grotesk', sans-serif;font-weight:600;font-size:19px;color:#fff;">Outside the Box Education</div>
-<p>A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
-</div>
-<div class="footer-cols">
-<div class="footer-col">
-<h4>Explore</h4>
-<a href="/#pillars">What's Inside</a>
-<a href="/#episodes">Latest resources</a>
-<a href="/#voices">Reader stories</a>
-</div>
-<div class="footer-col">
-<h4>Company</h4>
-<a href="#">About us</a>
-<a href="#">Contact</a>
-<a href="#">Press</a>
-</div>
-<div class="footer-col">
-<h4>Follow</h4>
-<a href="#">Instagram</a>
-<a href="#">YouTube</a>
-<a href="#">Apple Podcasts</a>
-</div>
-</div>
-</div>
-<div class="wrap footer-bottom">
-<p>© 2026 Outside the Box Education. All rights reserved.</p>
-<p>Made for families, by families.</p>
-<p>Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.</p>
-</div>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-foot" style="background:var(--bg); display:inline-flex; padding:10px 14px 8px; border-radius:16px;">
+        <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">        </div>
+        <p style="margin-top:14px; font-size:14px; color:#8E857D; max-width:34ch;">A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#pillars">What's Inside</a></li>
+          <li><a href="#coming-soon.html">Shop</a></li>
+          <li><a href="#get-involved">Get Involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Apple Podcasts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Outside the Box Education. All rights reserved.</span>
+      <span>Made for families, by families.</span>
+    </div>
+    <div style="text-align:center; font-size:11.5px; color:#8E857D; margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto;">
+      Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.
+    </div>
+  </div>
 </footer>
 </body>
 </html>
