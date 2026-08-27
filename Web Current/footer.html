@@ -1,0 +1,58 @@
+style>
+  .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+  footer{background:var(--charcoal); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
+footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
+footer ul{list-style:none; margin:0}
+/* This line or margin:0 would be a potential fix for unwanted overflow spacing */
+footer ul, h3{padding:0}
+footer li{margin-bottom:9px; font-size:14.5px;}
+footer a, .no-underline{text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+.foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
+@media (max-width:900px){
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+  </style>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-foot" style="background:#FAF3EC; display:inline-flex; padding:10px 14px 8px; border-radius:16px;">
+        <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">        </div>
+        <p style="margin-top:14px; font-size:14px; color:#8E857D; max-width:34ch;">A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#pillars">What's Inside</a></li>
+          <li><a href="#episodes">Latest resources</a></li>
+          <li><a href="#voices">Reader stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Apple Podcasts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Outside the Box Education. All rights reserved.</span>
+      <span>Made for families, by families.</span>
+    </div>
+    <div style="text-align:center; font-size:11.5px; color:#8E857D; margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto;">
+      Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.
+    </div>
+  </div>
+</footer>
