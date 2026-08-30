@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is the Charlotte Mason Method? — Outside the Box Education</title>
+<style>
+  :root{
+    --cream:#f5f1ea;
+    --ink:#2b2a28;
+    --ink-soft:#514f4a;
+    --rule:#e4dcd0;
+    --terracotta:#a8705f;
+    --terracotta-dark:#8f5c4d;
+    --charcoal:#2e2a27;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  /* ---------- Header ---------- */
+#header-placeholder{
+    position:sticky; top:0; z-index:50;
+}
+
+  /* ---------- Breadcrumb ---------- */
+  .breadcrumb{
+    max-width:760px;
+    margin:28px auto 0;
+    padding:0 24px;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  .breadcrumb a:hover{text-decoration:underline;}
+
+  /* ---------- Article header ---------- */
+  main{max-width:760px;margin:0 auto;padding:0 24px 90px;}
+
+  .eyebrow{
+    margin-top:26px;
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    color:var(--terracotta-dark);
+  }
+  h1.title{
+    font-size:2.6rem;
+    line-height:1.18;
+    margin:14px 0 18px;
+    letter-spacing:-0.01em;
+    color:#1f1e1c;
+  }
+  p.subtitle{
+    font-size:1.2rem;
+    color:var(--ink-soft);
+    margin:0 0 22px;
+    max-width:700px;
+  }
+  .byline{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding-bottom:26px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:34px;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+  }
+  .avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--terracotta);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:0.85rem;
+    flex-shrink:0;
+  }
+  .byline b{color:var(--ink);}
+  .byline .dot{margin:0 6px;}
+
+  /* ---------- Images ---------- */
+  figure{margin:0 0 40px;}
+  figure img{
+    width:100%;
+    display:block;
+    border-radius:14px;
+  }
+  figure figcaption{
+    margin-top:10px;
+    font-size:0.88rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  figure.hero img{border-radius:16px;}
+  figure.inline-img{margin:38px 0;}
+
+  .portrait-figure{
+    float:right;
+    width:220px;
+    margin:0 0 18px 28px;
+  }
+  .portrait-figure img{border-radius:10px;}
+  .portrait-figure figcaption{text-align:left;font-size:0.82rem;}
+
+  /* ---------- Article body ---------- */
+  article.body{font-size:1.08rem;color:#3a3936;}
+  article.body p{margin:0 0 22px;}
+  article.body h2{
+    font-size:1.5rem;
+    margin:44px 0 16px;
+    color:#1f1e1c;
+    letter-spacing:-0.005em;
+  }
+  article.body h2:first-of-type{margin-top:8px;}
+  article.body ul{margin:0 0 22px;padding-left:22px;}
+  article.body li{margin-bottom:8px;}
+  article.body em{color:var(--ink-soft);}
+  .clear{clear:both;}
+
+  .pull-quote{
+    border-left:3px solid var(--terracotta);
+    padding:4px 0 4px 22px;
+    margin:36px 0;
+    font-size:1.25rem;
+    font-style:italic;
+    color:#1f1e1c;
+  }
+
+  .schedule-box{
+    background:#efe8db;
+    border-radius:14px;
+    padding:26px 30px;
+    margin:32px 0;
+  }
+  .schedule-box h3{
+    margin:0 0 6px;
+    font-size:1rem;
+    letter-spacing:0.02em;
+    color:var(--terracotta-dark);
+  }
+  .schedule-box p{margin:0 0 18px;}
+  .schedule-box p:last-child{margin-bottom:0;}
+
+  .closing-line{
+    font-size:1.15rem;
+    color:#1f1e1c;
+  }
+/*Footer*/
+footer{background:var(--charcoal); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
+.wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
+.brand-foot img{height:64px; width:auto; display:block; border-radius:10px;}
+footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
+footer ul{list-style:none; margin:0; padding:0;}
+footer li{margin-bottom:9px; font-size:14.5px;}
+footer a, .no-underline{text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+.foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
+  @media (max-width:640px){
+    nav.main-nav{display:none;}
+    h1.title{font-size:2rem;}
+    p.subtitle{font-size:1.05rem;}
+   .portrait-figure{width:180px;margin-left:7px;}
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main>
+  <div class="eyebrow">ARTICLE</div>
+  <h1 class="title">What Is the Charlotte Mason Method?</h1>
+  <p class="subtitle">Living books, narration, nature study, short lessons&nbsp;— here's what these familiar homeschool words actually mean, and why they still shape homeschools more than a century later.</p>
+
+  <div class="byline">
+    <div class="avatar">ME</div>
+    <div><b>Mindi Eldredge</b> <span class="dot">·</span> August 21, 2026 <span class="dot">·</span> 9 min read</div>
+  </div>
+
+  <figure class="hero">
+    <img src="https://i.postimg.cc/26n5fY9P/hero-nature-study.jpg" alt="A child lies in the grass examining mushrooms through a magnifying glass.">
+    <figcaption>A Charlotte Mason education makes room for a child to simply stop and notice.</figcaption>
+  </figure>
+
+  <article class="body">
+
+    <figure class="portrait-figure">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Charlotte_Mason_1902_Frederic_Yates.jpg" alt="Portrait of Charlotte Mason, painted by Frederic Yates in 1902.">
+      <figcaption>Charlotte Mason (1842–1923), painted by Frederic Yates, 1902.</figcaption>
+    </figure>
+
+    <p>If you have spent much time exploring homeschooling, you have probably heard the name Charlotte Mason. Perhaps you've heard parents talk about living books, narration, nature study, or short lessons and wondered what all of those things have in common.</p>
+
+    <p>These ideas come from the educational philosophy of Charlotte Mason, a British educator who lived from 1842 to 1923.</p>
+
+    <p>Charlotte Mason believed children were born persons — with minds, hearts, imaginations, and a natural desire to know and understand the world around them. Education, in her view, was not simply about filling a child's mind with information. It was about giving children rich ideas and experiences that would help them become thoughtful, curious, capable people.</p>
+
+    <p>Her philosophy offers a beautiful alternative to an education centered primarily on textbooks, worksheets, memorization, and testing.</p>
+
+    <p>But what does a Charlotte Mason education actually look like?</p>
+
+    <div class="clear"></div>
+
+    <h2>Education Is More Than the Transmission of Information</h2>
+    <p>A child is not an empty container waiting for an adult to fill it with knowledge. Children already have minds of their own. They are naturally curious. They want to explore, ask questions, make connections, and understand the world.</p>
+    <p>Because of this, Mason believed our role as educators is not merely to give children information. Instead, we should place them in contact with rich ideas, beautiful things, meaningful experiences, and worthy books, and then give them the opportunity to think about what they encounter.</p>
+    <p>This changes the question we ask.</p>
+    <p>Instead of asking, "How can I get my child to remember this?" we begin asking, "What is worth knowing, and how can I help my child encounter it?"</p>
+
+    <h2>Living Books Instead of Dry Textbooks</h2>
+    <p>One of the best-known features of a Charlotte Mason education is the use of living books.</p>
+    <p>A living book is generally a book written by an author who is deeply interested in a subject and communicates that subject in a compelling, engaging way. Rather than presenting a collection of disconnected facts, a living book invites a child into a subject through story, ideas, personality, and vivid language.</p>
+    <p>For example, instead of learning about George Washington from a textbook filled with dates and facts, a child might read a well-written biography that tells the story of his life.</p>
+    <p>Instead of memorizing a list of scientific facts about birds, a child might read a naturalist's account of birds and then spend time outside observing them.</p>
+    <p>Living books don't eliminate facts. They give facts a place to live.</p>
+
+    <figure class="inline-img">
+      <img src="https://i.postimg.cc/gjG33g4d/living-books.jpg" alt="A father reads a picture book with his two children curled up beside him.">
+      <figcaption>A living book invites the whole family into a story, not just a set of facts.</figcaption>
+    </figure>
+
+    <h2>Narration: Learning by Telling</h2>
+    <p>Another cornerstone of the Charlotte Mason method is narration.</p>
+    <p>Narration is wonderfully simple: a child tells you what he or she has learned.</p>
+    <p>After reading a passage, the parent might say:</p>
+    <p class="pull-quote">"Tell me what you remember."</p>
+    <p>The child then retells the story or explains the ideas in his or her own words.</p>
+    <p>This may sound simple, but narration requires a child to listen carefully, understand what was read, organize thoughts, remember important details, and communicate those ideas clearly.</p>
+    <p>In other words, the child isn't simply recognizing information on a worksheet. The child is processing it.</p>
+    <p>Narration can be oral, written, drawn, acted out, or expressed in other creative ways. As children grow older, written narration becomes increasingly important.</p>
+
+    <figure class="inline-img">
+      <img src="https://i.postimg.cc/rwRRR6cD/narration.jpg" alt="A boy gestures animatedly while telling his mother about something at the breakfast table.">
+      <figcaption>Narration in action: telling back, in your own words, what you've just read.</figcaption>
+    </figure>
+
+    <h2>Short Lessons and Focused Attention</h2>
+    <p>Charlotte Mason also advocated for short lessons, particularly for younger children.</p>
+    <p>The idea isn't to cram more subjects into the day. Rather, short lessons help children develop the habit of focused attention without exhausting them.</p>
+    <p>A young child might spend fifteen minutes on a particular lesson and then move on to something else. As children mature, lessons can gradually become longer.</p>
+
+    <h2>Habit Training</h2>
+    <p>Charlotte Mason believed that education involved more than academics. She also placed considerable emphasis on the development of good habits.</p>
+    <p>Habits such as attentiveness, obedience, orderliness, diligence, courtesy, and self-control were considered an important part of a child's education.</p>
+    <p>This doesn't mean creating a home where children are constantly corrected. Instead, parents intentionally help children establish good patterns until those patterns become natural.</p>
+    <p>A child who learns to put away his belongings, listen attentively when someone is speaking, complete a task carefully, or respond kindly is learning something just as valuable as a math fact.</p>
+
+    <h2>Nature Study and Real-World Learning</h2>
+    <p>Nature study is another familiar part of a Charlotte Mason education.</p>
+    <p>Mason encouraged children to spend abundant time outdoors observing the natural world. Rather than simply reading about nature, children were encouraged to experience it firsthand.</p>
+    <p>A child might watch birds, identify flowers, observe insects, sketch a tree, study clouds, or keep a nature journal. The point isn't necessarily to turn every outdoor walk into a formal science lesson; rather, sometimes the best education happens when a child simply stops to notice.</p>
+    <p>Charlotte Mason also believed that children needed real-world, hands-on learning opportunities. This might mean visiting a museum, walking through a forest, growing a garden, observing animals, cooking, exploring a historical site, or simply spending an afternoon outdoors.</p>
+
+    <figure class="inline-img">
+      <img src="https://i.postimg.cc/02FbstmC/real-world-learning.jpg" alt="A mother and young son pet a goat at a small farm.">
+      <figcaption>Real-world encounters teach things a textbook never could.</figcaption>
+    </figure>
+
+    <h2>The Arts, Poetry, and Beautiful Things</h2>
+    <p>Charlotte Mason's vision of education was broad.</p>
+    <p>For true success, children should not spend their days studying only what is traditionally deemed "core" subjects. They should also encounter art, music, poetry, literature, nature, history, geography, and the ideas of great thinkers.</p>
+    <p>This is sometimes described as a feast of ideas.</p>
+    <p>The goal is to give children a rich intellectual and cultural life rather than narrowing education to the subjects that can be easily measured.</p>
+    <p>A child might study the paintings of a great artist, listen to the music of a composer, memorize a beautiful poem, read mythology or classic literature, learn about another culture, and spend time observing nature — all alongside mathematics, language arts, and science.</p>
+    <p>Education becomes an invitation to know and love the world.</p>
+
+    <h2>What Charlotte Mason Is Not</h2>
+    <p>Because the Charlotte Mason method includes some distinctive practices, it can sometimes be misunderstood.</p>
+    <p>A Charlotte Mason education is not simply:</p>
+    <ul>
+      <li>Reading lots of books</li>
+      <li>Spending all day outside</li>
+      <li>Avoiding textbooks entirely</li>
+      <li>Letting children do whatever they want</li>
+      <li>Never using worksheets</li>
+      <li>Refusing to teach children directly</li>
+    </ul>
+    <p>The philosophy is much broader than any one of these practices.</p>
+    <p>At its heart, Charlotte Mason's approach is about respecting children as persons and giving them a rich, generous education.</p>
+    <p>Different families will apply her principles in different ways. Some follow her methods very closely, while others incorporate Charlotte Mason ideas into a broader homeschool approach.</p>
+    <p>And that's one of the beautiful things about homeschooling: you can take thoughtful ideas and adapt them to the needs of your own family.</p>
+
+    <h2>What Might a Charlotte Mason Homeschool Day Look Like?</h2>
+    <p>A Charlotte Mason-inspired homeschool might include:</p>
+
+    <div class="schedule-box">
+      <h3>MORNING</h3>
+      <p>Bible or another meaningful reading, poetry, history, literature, and narration</p>
+      <h3>MIDDAY</h3>
+      <p>Mathematics, writing, spelling, and other skill-based lessons</p>
+      <h3>AFTERNOON</h3>
+      <p>Nature study, art, music, handicrafts, outdoor play, or independent reading</p>
+    </div>
+
+    <p>The exact schedule will look different from family to family.</p>
+    <p>What matters most is not following a particular timetable. It is creating an educational environment where children are regularly encountering good books, meaningful ideas, beautiful things, and the real world.</p>
+
+    <h2>Why Do Families Love the Charlotte Mason Method?</h2>
+    <p>For many families, the appeal of Charlotte Mason is that it brings joy and richness back into education.</p>
+    <p>Instead of racing through endless worksheets, children have time to read good books.</p>
+    <p>Instead of memorizing facts simply for a test, they have opportunities to think, discuss, and narrate.</p>
+    <p>Instead of spending every waking hour indoors doing schoolwork, they have time to explore the outdoors.</p>
+    <p>Instead of treating education as something that happens only between the hours of 9:00 and 3:00, education becomes part of everyday life.</p>
+    <p>And perhaps most importantly, children are treated as people who are capable of thinking, wondering, noticing, and knowing.</p>
+
+    <h2>You Don't Have to Do It Perfectly</h2>
+    <p>One of the biggest misconceptions about any homeschool philosophy is that you have to adopt every practice in order to "do it right."</p>
+    <p>You don't.</p>
+    <p>Perhaps you love living books but don't want to give up every textbook. Perhaps you want to incorporate narration but aren't ready to begin nature journaling. Perhaps your family spends hours outdoors but prefers a different approach to history.</p>
+    <p>That's okay.</p>
+    <p>Charlotte Mason's ideas can be a source of inspiration rather than another standard you feel pressured to meet.</p>
+    <p>Start with one thing.</p>
+    <p>Read a living book together. Ask your child to tell you what they remember. Take a walk and pay attention to what you see. Read a poem. Look closely at a painting. Give your child time to wonder.</p>
+    <p>Over time, these small changes can begin to transform the atmosphere of your homeschool.</p>
+
+    <h2>A Rich Education Begins With Curiosity</h2>
+    <p>Charlotte Mason's educational philosophy ultimately invites us to see education differently.</p>
+    <p>Education isn't merely preparation for the next grade, the next test, or even the next stage of life.</p>
+    <p>It is the gradual development of a person who is curious about the world, capable of thinking deeply, eager to learn, and able to find meaning and beauty in the things around them.</p>
+    <p>A Charlotte Mason education doesn't ask, "How much information can we get into this child?"</p>
+    <p>It asks something much more beautiful:</p>
+    <p class="pull-quote">"What wonderful things can we place before this child to know?"</p>
+    <p>And perhaps that is why Charlotte Mason's ideas continue to resonate with homeschool families more than a century after she first wrote them.</p>
+    <p class="closing-line">Education can be rigorous without being dry. It can be structured without being sterile. It can be rich without being overwhelming. And it can be, above all, a joyful invitation to know and love the world.</p>
+
+  </article>
+</main>
+
+<div id="footer-placeholder"></div>
+ <script src="script.js"></script>
+</body>
+</html>
+</html>
