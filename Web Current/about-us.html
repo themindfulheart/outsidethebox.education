@@ -36,7 +36,7 @@ a{color:inherit;text-decoration:none;}
 */
 img{max-width:100%;display:block;}
 .wrap{max-width:1160px;margin:0 auto;padding:0 28px;}
-/* ---------- Header (matches site-wide header) ---------- */
+/* ---------- Header (matches site-wide header) ---------- 
 header:has(nav){
   position:sticky; top:0; z-index:50;
   background:rgba(250,243,236,0.92);
@@ -59,7 +59,7 @@ header:has(nav){
 .nav-cta:hover{background:#84463d;}
 @media (max-width:775px){
   .nav-links{display:none;}
-}
+} */
 /* ---------- Shared type ---------- */
 .eyebrow{
 font-family:'IBM Plex Mono', monospace;
@@ -146,7 +146,7 @@ color:#fff;margin-top:8px;
 .movement{padding:40px 28px;}
 .movement-grid{grid-template-columns:1fr;gap:28px;}
 }
-/* ---------- Footer (matches site-wide footer) ---------- */
+/* ---------- Footer (matches site-wide footer) ---------- 
 footer{background:var(--ink); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
 .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
 footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
@@ -157,25 +157,11 @@ footer a:hover{text-decoration:underline;}
 .foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
 @media (max-width:900px){
   .foot-grid{grid-template-columns:1fr 1fr;}
-}
+} */
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a href="index.html#top" class="brand">
-      <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">
-    </a>
-    <nav class="nav-links">
-      <a href="index.html#pillars">What's Inside</a>
-      <a href="coming-soon.html">Shop</a>
-      <a href="about-us.html">About Us</a>
-      <!--This should be ready to commit as soon as I learn where to send SL link-->
-      <a href="index.html#episodes">Start Here</a>
-    </nav>
-    <a href="index.html#subscribe" class="nav-cta">Get Weekly Homeschool Help</a>
-  </div>
-</header>
+<div id="header-placeholder"></div>
 <main>
 <!-- HERO -->
 <section class="hero">
@@ -295,48 +281,8 @@ footer a:hover{text-decoration:underline;}
 </div>
 </section>
 </main>
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="brand-foot" style="background:var(--bg); display:inline-flex; padding:10px 14px 8px; border-radius:16px;">
-        <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">        </div>
-        <p style="margin-top:14px; font-size:14px; color:#8E857D; max-width:34ch;">A trusted voice in homeschooling — podcasts, guides, and reviews, made by families for families.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#pillars">What's Inside</a></li>
-          <li><a href="#coming-soon.html">Shop</a></li>
-          <li><a href="#get-involved">Get Involved</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about-us.html">About us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Follow</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Apple Podcasts</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Outside the Box Education. All rights reserved.</span>
-      <span>Made for families, by families.</span>
-    </div>
-    <div style="text-align:center; font-size:11.5px; color:#8E857D; margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto;">
-      Affiliate disclosure: some links on this site are affiliate links. If you make a purchase through them, we may earn a commission at no additional cost to you. We only recommend products and resources we've genuinely used and believe in.
-    </div>
-  </div>
-</footer>
+
+<div id="footer-placeholder"></div>
 
 <script src="script.js"></script>
 
