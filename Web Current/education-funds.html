@@ -81,6 +81,7 @@ nav.main-nav{display:none;}
   .hero-content { text-align: center; max-width: 700px; margin: 0 auto 36px; }
   .hero-content .eyebrow { display: block; margin-bottom: 14px; }
   .hero-content h1 { font-size: 46px; line-height: 1.14; margin: 0 0 18px; }
+   hr{border:none;border-top:4px dashed var(--blush-line);margin-bottom:20px;}
   .hero-content .lede { font-size: 17.5px; color: var(--charcoal-soft); max-width: 58ch; margin: 0 auto; }
   .hero-ctas { display: flex; gap: 14px; margin-top: 26px; flex-wrap: wrap; justify-content: center; }
   .btn { font-size: 14.5px; font-weight: 600; padding: 13px 24px; border-radius: 30px; text-decoration: none; display: inline-block; border: 1.5px solid transparent; cursor: pointer; }
@@ -88,12 +89,8 @@ nav.main-nav{display:none;}
   .btn-solid:hover { background: rgb(132, 70, 61); }
   .btn-outline { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
   .btn-outline:hover { background: rgba(46, 42, 39, 0.06); }
-  .hero-photo { position: relative; border-radius: 28px; overflow: hidden; min-height: 420px; margin-bottom: 8px; }
-  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; max-height: 480px; }
-  .hero-photo-top { min-height: 0; max-width: 480px; margin: 0 auto 28px; border-radius: 20px; }
-  .hero-photo-top img { max-height: none; }
   @media (max-width: 900px) { .hero-content h1 { font-size: 34px; } }
-  @media (max-width: 640px) { .hero-content h1 { font-size: 28px; } .hero-photo-top { max-width: 100%; } }
+  @media (max-width: 640px) { .hero-content h1 { font-size: 28px; }  }
 
   /* ---------- Section shells ---------- */
   section { padding: 64px 0; }
@@ -190,10 +187,8 @@ footer a:hover{text-decoration:underline;}
   <section class="hero">
     <div class="wrap">
       <div class="hero-content">
-        <div class="hero-photo hero-photo-top">
-          <img src="https://i.postimg.cc/gJhgVRKG/shutterstock-2820939441-(1).jpg" alt="A graduation-cap-wearing piggy bank sits atop a stack of books beside a jar labeled 'Education Fund', next to the words Education Savings & Funding.">
-        </div>
         <h1>Education Savings & Funding</h1>
+        <hr>
         <p class="lede">Discover Education Savings Accounts, state-funded learning programs, scholarships, free resources, and other ways to make personalized education more affordable.</p>
         <div class="hero-ctas">
           <a href="#state-directory" class="btn btn-solid">Find your state's programs</a>
