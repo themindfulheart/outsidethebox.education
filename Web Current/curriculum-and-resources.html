@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
 <style>
 :root{
 --cream:#FAF3EC;
@@ -23,20 +24,9 @@
 --footer-line:rgba(255,255,255,0.12);
 --radius:14px;
 }
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-margin:0;
-background:var(--paper);
-color:var(--ink);
-font-family:'Inter',system-ui,sans-serif;
-line-height:1.6;
-}
-@‌media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
 h1,h2,h3{font-family:'Familjen Grotesk',sans-serif;font-weight:600;margin:0;}
-a{color:inherit;}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
-/* ================= HEADER ================= */
+/* ================= HEADER ================= 
 header{
 position:sticky;top:0;z-index:50;
 background:rgba(250,243,236,0.92);
@@ -138,7 +128,7 @@ width:fit-content;
 }
 .card-link svg{width:14px;height:14px;transition:transform .15s ease;}
 .card-link:hover svg{transform:translateX(3px);}
-/* ================= FOOTER ================= */
+/* ================= FOOTER ================= 
 footer{background:var(--ink); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
 .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:36px;}
 footer h4{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#8E857D; margin:0 0 14px; font-weight:600;}
@@ -147,9 +137,12 @@ footer li{margin-bottom:9px; font-size:14.5px;}
 footer a, .no-underline{text-decoration:none;}
 footer a:hover{text-decoration:underline;}
 .foot-bottom{border-top:1px solid #453F3A; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8E857D;}
+*/
 </style>
 </head>
 <body>
+  <div id="header-placeholder"></div>
+  <!--
 <header>
 <div class="header-inner">
 <a class="brand" href="https://outsidethebox.education/">
@@ -164,6 +157,7 @@ footer a:hover{text-decoration:underline;}
 <a class="btn-pill" href="https://outsidethebox.education/#subscribe">Join the list</a>
 </div>
 </header>
+-->
 <section class="hero">
 <article class="hero-sub">
 <h1>Curriculum & Resource Reviews</h1>
@@ -217,6 +211,8 @@ footer a:hover{text-decoration:underline;}
 </article>
 </div>
 </div>
+<div id="footer-placeholder"></div>
+<!--
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -259,5 +255,7 @@ footer a:hover{text-decoration:underline;}
     </div>
   </div>
 </footer>
+-->
+<script src="script.js"></script>
 </body>
 </html>

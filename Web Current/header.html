@@ -1,0 +1,45 @@
+<style>
+  :root{
+  --charcoal:#2E2A27;
+  --rose:#C98C82;
+  --blush-line:#E3C9BF;
+  --rose-deep:#9C5F55;
+}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+  header:has(nav){
+  background:rgba(250,243,236,0.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--blush-line);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
+.brand{padding:4px 0;}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--charcoal);}
+.brand img{height:92px; width:auto; display:block;}
+.nav-links{display:flex; gap:28px; font-size:14.5px; font-weight:500;}
+.nav-links a{text-decoration:none; border-bottom:2px solid transparent; padding-bottom:3px;}
+.nav-links a:hover{border-color:var(--rose);}
+.nav-cta{
+  font-size:14px; font-weight:600;
+  background:var(--rose-deep); color:#fff; padding:10px 20px; border-radius:30px;
+  text-decoration:none; white-space:nowrap; margin-right:5px;
+}
+.nav-cta:hover{background:#84463d;}
+@media (max-width:830px){
+  .nav-links{display:none;}
+}
+  </style>
+<header>
+  <div class="wrap nav">
+    <a href="index.html#top" class="brand">
+      <img src="https://i.postimg.cc/WzzbYM5Z/image1.png">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#pillars">What's Inside</a>
+      <a href="coming-soon.html">Shop</a>
+      <a href="about-us.html">About Us</a>
+      <!--This should be ready to commit as soon as I learn where to send SL link-->
+      <a href="index.html#episodes">Start Here</a>
+    </nav>
+    <a href="index.html#subscribe" class="nav-cta">Get Weekly Homeschool Help</a>
+  </div>
+</header>
