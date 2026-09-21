@@ -19,19 +19,12 @@
 --footer-heading: #8E857D;
 --border: rgba(46, 42, 27, 0.1);
 }
-{ box-sizing: border-box; }
-body {
-margin: 0;
-font-family: 'Inter', sans-serif;
-background: var(--cream);
-color: var(--ink);
-}
 h1, h2, h3, h4 {
 font-family: 'Familjen Grotesk', sans-serif;
 color: var(--ink);
 margin: 0;
 }
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none;}
 .wrap {
 max-width: 1160px;
 margin: 0 auto;
@@ -45,8 +38,9 @@ text-align: center;
 }
 .hero h1 {
 font-size: 46px;
-margin-bottom: 20px;
+/*margin-bottom: 20px;*/
 }
+hr{border:none;border-top:4px dashed var(--blush-line);margin-bottom:20px;}
 .hero p.intro {
 font-size: 17.5px;
 line-height: 28.875px;
@@ -199,14 +193,14 @@ font-size: 13px;
 color: var(--footer-text);
 }
 /* ---------- RESPONSIVE ---------- */
-@‌media (max-width: 800px) {
+@media (max-width: 800px) {
 .nav-links { display: none; }
 .featured-grid { grid-template-columns: 1fr; }
 .topic-grid { grid-template-columns: repeat(2, 1fr); }
 .foot-grid { grid-template-columns: 1fr 1fr; }
 .newsletter { flex-direction: column; align-items: flex-start; }
 }
-@‌media (max-width: 520px) {
+@media (max-width: 520px) {
 .topic-grid { grid-template-columns: 1fr; }
 .foot-grid { grid-template-columns: 1fr; }
 }
@@ -218,6 +212,7 @@ color: var(--footer-text);
 <!-- ============ HERO ============ -->
 <section class="hero wrap">
 <h1>Guides & Articles</h1>
+<hr>
 <p class="intro">Real, practical resources for every stage of your homeschooling journey — written by families who've lived it.</p>
 </section>
 <!-- ============ START HERE ============ -->

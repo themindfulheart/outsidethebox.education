@@ -58,9 +58,20 @@ header:has(nav){
 #first-p{margin-top:30px;}
 
 hr{border:none;border-top:3px dashed var(--blush-line);margin-top:-10px}
-
+/*
 .catalog{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-.cat-margin{margin-bottom:172px;margin-left:150px;}
+.cat-card{background:#fff; border:1px solid var(--blush-line); overflow:hidden; display:flex; flex-direction:column;}
+a.cat-card, a.one-card{text-decoration:none; transition:box-shadow .18s ease, transform .18s ease;}
+a.cat-card:hover, a.one-card:hover{box-shadow:0 8px 22px rgba(46,42,39,0.08); transform:translateY(-2px);border-color:var(--rose);}
+a.cat-card:hover h3, a.one-card:hover h3{color:var(--rose-deep);}
+.cat-thumb{height:180px; overflow:hidden; position:relative;}
+.cat-thumb img{width:100%; height:100%; object-fit:cover;}
+.cat-body{padding:18px 20px 22px;}
+.cat-tag{font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--rose-deep); margin-bottom:8px; display:block;}
+.cat-card h3{font-size:17px; margin-bottom:8px;}
+.cat-card p{font-size:14px; color:var(--charcoal-soft); margin-bottom:0;}
+*/
+.catalog{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
 .cat-card{background:#fff;border:1px solid var(--blush-line);overflow:hidden; padding:0px 20px 22px;display:flex;position:absolute;position-anchor:--img-anchor;width:anchor-size(width);flex-direction:column}
 .cat-card h3{font-size:17px; padding-top:5px;}
 .cat-card p{font-size:14px; color:var(--charcoal-soft);}
@@ -71,7 +82,7 @@ a.cat-card{text-decoration:none; color:inherit; transition:box-shadow .18s ease,
 a.cat-card:hover{box-shadow:0 8px 22px rgba(46,42,39,0.08); transform:translateY(-2px); border-color:var(--rose);}
 a.cat-card:hover h3{color:var(--rose-deep);}
 .cat-thumb{position:relative;}
-.cat-thumb img{width:auto; max-height:250px;anchor-name:--img-anchor}
+.cat-thumb img{width:auto; max-height:250px;anchor-name:--img-anchor;}
 
 /*
 footer{background:var(--charcoal); color:#C9BFB6; padding:52px 0 34px; margin-top:20px;}
@@ -128,9 +139,19 @@ footer a:hover{text-decoration:underline;}
       <p>Because sometimes the greatest transformations happen when we stop asking, “How do we make a child fit the system?” and start asking, “How can we create a system that fits the child?”</p>
     </article>
   </section>
+  <section class="section">
+    <div class="catalog">
+      <p>Testing</p>
+    <article class="wrap">
 
-  <section class="section catalog">
-    <article class="cat-margin">
+      <figure class="cat-thumb">
+        <img src="https://i.postimg.cc/d1K5HCV2/Podcast-Thumnails.png" alt="Her Daughter Was Failing School Until They Found a Different Way">
+        </figure>
+    <div class="cat-card">
+        <h3>Podcast #?: Title Will Go Here</h3>
+        <p>Date will go here | Length will go here</p>
+        <p class="lede">Episode description . . .</p>
+      </div>
       <figure class="cat-thumb">
         <img src="https://i.postimg.cc/d1K5HCV2/Podcast-Thumnails.png" alt="Her Daughter Was Failing School Until They Found a Different Way">
         </figure>
@@ -140,6 +161,7 @@ footer a:hover{text-decoration:underline;}
         <p class="lede">Episode description . . .</p>
       </div>
         </article>
+        </div>
         </section>
 </main>
 <div id="footer-placeholder"></div>
