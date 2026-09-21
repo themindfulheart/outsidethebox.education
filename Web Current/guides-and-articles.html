@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guides & Articles — Outside the Box Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
+<style>
+:root {
+--cream: #FAF3EC;
+--ink: #2E2A27;
+--ink-soft: #5C5650;
+--terracotta: #9C5F55;
+--footer-bg: #2E2A27;
+--footer-text: #C9BFB6;
+--footer-heading: #8E857D;
+--border: rgba(46, 42, 27, 0.1);
+}
+h1, h2, h3, h4 {
+font-family: 'Familjen Grotesk', sans-serif;
+color: var(--ink);
+margin: 0;
+}
+a { text-decoration: none;}
+.wrap {
+max-width: 1160px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+padding: 56px 0 40px;
+text-align: center;
+}
+.hero h1 {
+font-size: 46px;
+/*margin-bottom: 20px;*/
+}
+hr{border:none;border-top:4px dashed var(--blush-line);margin-bottom:20px;}
+.hero p.intro {
+font-size: 17.5px;
+line-height: 28.875px;
+color: var(--ink-soft);
+max-width: 560px;
+margin: 0 auto;
+}
+/* ---------- SECTIONS ---------- */
+section.page-section {
+padding: 32px 0;
+}
+.eyebrow {
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: var(--terracotta);
+margin: 0 0 12px;
+}
+h2.section-title {
+font-size: 30px;
+margin-bottom: 24px;
+}
+/* ---------- FEATURED "START HERE" CARDS ---------- */
+.featured-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+.featured-card {
+background: #fff;
+border: 2px solid var(--terracotta);
+border-radius: 16px;
+padding: 28px;
+}
+.featured-card .badge {
+display: inline-block;
+background: rgba(156, 95, 85, 0.12);
+color: var(--terracotta);
+font-size: 12px;
+font-weight: 600;
+padding: 4px 12px;
+border-radius: 30px;
+margin-bottom: 14px;
+}
+.featured-card h3 {
+font-size: 21px;
+margin-bottom: 8px;
+}
+.featured-card p {
+font-size: 15px;
+line-height: 1.6;
+color: var(--ink-soft);
+margin: 0 0 16px;
+}
+.card-link {
+font-size: 14px;
+font-weight: 600;
+color: var(--terracotta);
+}
+/* ---------- TOPIC GRID ---------- */
+.topic-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+.topic-card {
+background: #fff;
+border: 1px solid var(--border);
+border-radius: 16px;
+padding: 24px;
+transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.topic-card:hover {
+border-color: var(--terracotta);
+transform: translateY(-2px);
+}
+.topic-card .icon {
+width: 40px;
+height: 40px;
+border-radius: 12px;
+background: rgba(156, 95, 85, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+margin-bottom: 14px;
+}
+.topic-card h3 {
+font-size: 18px;
+margin-bottom: 6px;
+}
+.topic-card p {
+font-size: 14.5px;
+line-height: 1.55;
+color: var(--ink-soft);
+margin: 0 0 12px;
+}
+.topic-card .count {
+font-size: 13px;
+color: var(--footer-heading);
+font-weight: 600;
+}
+/* ---------- FOOTER (matches site footer) ---------- */
+footer {
+background: var(--footer-bg);
+color: var(--footer-text);
+padding: 56px 0 24px;
+margin-top: 40px;
+}
+.foot-grid {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr 1fr;
+gap: 32px;
+padding-bottom: 32px;
+}
+.brand-foot img { height: 32px; margin-bottom: 12px; }
+.foot-grid p {
+font-size: 14px;
+line-height: 1.6;
+color: var(--footer-text);
+max-width: 320px;
+}
+.foot-grid h4 {
+font-family: 'Inter', sans-serif;
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--footer-heading);
+margin-bottom: 14px;
+}
+.foot-grid ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.foot-grid a {
+font-size: 14px;
+color: var(--footer-text);
+}
+.foot-grid a:hover { color: #fff; }
+.foot-bottom {
+border-top: 1px solid rgba(255,255,255,0.08);
+padding-top: 20px;
+font-size: 13px;
+color: var(--footer-text);
+}
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 800px) {
+.nav-links { display: none; }
+.featured-grid { grid-template-columns: 1fr; }
+.topic-grid { grid-template-columns: repeat(2, 1fr); }
+.foot-grid { grid-template-columns: 1fr 1fr; }
+.newsletter { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 520px) {
+.topic-grid { grid-template-columns: 1fr; }
+.foot-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<!-- ============ HEADER ============ -->
+<div id="header-placeholder"></div>
+<!-- ============ HERO ============ -->
+<section class="hero wrap">
+<h1>Guides & Articles</h1>
+<hr>
+<p class="intro">Real, practical resources for every stage of your homeschooling journey — written by families who've lived it.</p>
+</section>
+<!-- ============ START HERE ============ -->
+<section class="page-section wrap">
+<p class="eyebrow">New to homeschooling?</p>
+<h2 class="section-title">Start here</h2>
+<div class="featured-grid">
+
+
+<a class="featured-card" href="/guides/how-to-start-homeschooling">
+  <span class="badge">Start here</span>
+  <h3>How to start homeschooling</h3>
+  <p>Everything you need for your first year — legal steps, choosing an approach, and building your first schedule.</p>
+  <span class="card-link">Read the guide →</span>
+</a>
+<a class="featured-card" href="/guides/what-does-it-mean-to-educate-outside-the-box">
+  <span class="badge">Start here</span>
+  <h3>What does it mean to educate outside the box?</h3>
+  <p>The philosophy behind our name — why we think learning works best when it isn't forced into one shape.</p>
+  <span class="card-link">Read the guide →</span>
+</a>
+</div>
+</section>
+<!-- ============ BROWSE BY TOPIC ============ -->
+<section class="page-section wrap">
+<p class="eyebrow">Browse</p>
+<h2 class="section-title">All topics</h2>
+<div class="topic-grid">
+
+
+<a class="topic-card" href="/guides/homeschool-methods">
+  <div class="icon">📚</div>
+  <h3>Homeschool methods</h3>
+  <p>Charlotte Mason, Montessori, classical, unit studies, and how to tell what fits your family.</p>
+  <span class="count">12 articles</span>
+</a>
+<a class="topic-card" href="/guides/educational-alternatives">
+  <div class="icon">🔄</div>
+  <h3>Educational alternatives</h3>
+  <p>Co-ops, hybrid schooling, unschooling, and other paths beyond the traditional classroom.</p>
+  <span class="count">8 articles</span>
+</a>
+<a class="topic-card" href="/guides/organization-and-planning">
+  <div class="icon">🗂️</div>
+  <h3>Organization and planning</h3>
+  <p>Schedules, record-keeping, curriculum mapping, and systems that hold up on the hard weeks too.</p>
+  <span class="count">15 articles</span>
+</a>
+<a class="topic-card" href="/guides/teaching-strategies">
+  <div class="icon">✏️</div>
+  <h3>Teaching strategies</h3>
+  <p>Practical techniques for daily lessons, keeping kids engaged, and teaching subjects you don't love.</p>
+  <span class="count">18 articles</span>
+</a>
+<a class="topic-card" href="/guides/learning-differences">
+  <div class="icon">🧩</div>
+  <h3>Learning differences</h3>
+  <p>Dyslexia, ADHD, giftedness, and support strategies for learners who need a different approach.</p>
+  <span class="count">10 articles</span>
+</a>
+<a class="topic-card" href="/guides/child-development">
+  <div class="icon">🌱</div>
+  <h3>Child development</h3>
+  <p>What to expect at each age and stage, and how development shapes what — and when — to teach.</p>
+  <span class="count">9 articles</span>
+</a>
+<a class="topic-card" href="/guides/educational-research">
+  <div class="icon">🔬</div>
+  <h3>Educational research</h3>
+  <p>Studies and evidence-based insights on how kids actually learn, translated out of jargon.</p>
+  <span class="count">7 articles</span>
+</a>
+</div>
+</section>
+<!-- ============ FOOTER ============ -->
+<div id="footer-placeholder"></div>
+</body>
+<script src="script.js"></script>
+</html>
